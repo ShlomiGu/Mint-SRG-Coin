@@ -1,5 +1,5 @@
 import { Collapse, Fade, Grid, styled, Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 
 const StyledBox = styled("div")((props) => ({
   width: "50vw",
@@ -22,12 +22,12 @@ const TextBox = styled(Grid)({
 const TitleBox = styled(Typography)({
   fontSize: "1.5rem",
   fontWeight: "bold",
-  marginLeft: "15px",
+  marginLeft: "30px",
 });
 
 const SubTitleBox = styled("div")({
   fontsize: "0.75rem",
-  marginLeft: "15px",
+  marginLeft: "30px",
 });
 
 const OpenButtonBox = styled("div")({
@@ -51,22 +51,24 @@ const ContentBox = styled(Grid)({
 
 const ContentText = styled(Typography)({
   color: '#F1F1F1',
-  marginLeft: '15px'
+  marginLeft: '30px',
+  paddingTop: '30px',
+  fontSize: '1.2rem'
 })
 
-const ToggleInfo = () => {
-  const [isOpen, setIsOpened] = useState(false);
+const ToggleInfo = ({ title, subTitle, content, id, openKey, setOpenKey }) => {
+  const isOpen = openKey === id
 
   const handleToggleButtonClicked = () => {
-    setIsOpened(!isOpen);
+    isOpen ? setOpenKey(-1) : setOpenKey(id)
   };
 
   return (
     <>
       <StyledBox isOpen={isOpen}>
         <TextBox>
-          <TitleBox>{"How many Aliens will be available?"}</TitleBox>
-          <SubTitleBox></SubTitleBox>
+          <TitleBox>{title}</TitleBox>
+          <SubTitleBox>{subTitle}</SubTitleBox>
         </TextBox>
         <OpenButtonBox onClick={handleToggleButtonClicked}>
           <Fade in={!isOpen}>
@@ -76,10 +78,10 @@ const ToggleInfo = () => {
         </OpenButtonBox>
       </StyledBox>
 
-      <Collapse easing in={isOpen}>
+      <Collapse in={isOpen}>
         <ContentBox>
           <ContentText>
-            mashdfsdhfdsogsadg sdag displaygsadgsadgsadgdsag
+            {content}
           </ContentText>
         </ContentBox>
       </Collapse>
