@@ -2,14 +2,22 @@
   text-align: center;
 }
 
+.Lines-logo {
+  /* height: 60vmin; */
+  pointer-events: none;
+}
+
 .App-logo {
-  height: 40vmin;
+  /* height: 40vmin; */
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+  .Lines-logo {
+    animation: Lines-logo-spin infinite 20s linear;
   }
 }
 
@@ -24,6 +32,12 @@
   color: white;
 }
 
+:root{
+  --unnamed-color-f1f1f1: #F1F1F1;
+  --unnamed-color-ffcc00: #FFCC00;
+  --unnamed-color-060707: #060707;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -35,4 +49,17 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@keyframes Lines-logo-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+*{
+  font-family: 'Poppins';
 }
