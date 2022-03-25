@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from "styled-components"
+import Aos from "aos";
+import '../../../node_modules/aos/dist/aos.css';
 
 const WrapText = styled.div`
   display: inline-flex;
@@ -25,9 +27,12 @@ const Description = styled.p`
 `;
 
 const RowComp = ({ number, desc }) => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
   return (
-    <div>
-      <WrapText>
+    <div style={{marginBottom: '1em'}}>
+      <WrapText data-aos="fade-right">
         <NumberText>{number}</NumberText>
         <Description>{desc}</Description>
       </WrapText>
