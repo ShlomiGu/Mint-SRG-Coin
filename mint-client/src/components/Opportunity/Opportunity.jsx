@@ -1,0 +1,85 @@
+import React from 'react'
+import { styled } from '@mui/material'
+import items from '../../Data/OpportunityData';
+import BoxComp from './BoxComp';
+
+const OpportuniryContainer = styled('div')({
+    width: '100vw',
+    minHeight: '100vh',
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    zIndex: '1',
+    overflow: 'hidden',
+});
+
+const Screen = styled('div')({
+    width: '90%',
+    ['@media (max-width:780px)']: {
+        width: '100%',
+    }
+})
+
+const TitleText = styled('h1')({
+    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+
+    fontSize: "3rem",
+    fontWeight: "bold",
+    display: "flex",
+    flexDirection: "column",
+    marginTop: "17vh",
+    marginBottom: "5vh",
+    color: "#F1F1F1",
+
+    ['@media (max-width:780px)']: {
+        font: 'normal normal bold 26px/45px Poppins',
+        marginLeft: '5%'
+    },
+})
+
+const TitleUnderLine = styled('div')({
+    border: '4px solid',
+    color: '#FFCC00',
+    backgroundColor: '#FFCC00',
+    width: '50px',
+    marginTop: '15px'
+})
+
+const BoxContainer = styled('div')({
+    width: '85%',
+    margin: 'auto',
+    ['@media (max-width:780px)']: {
+        width: '90%',
+    },
+})
+
+const OpportunitySection = () => {
+    const checkIfIsLeft = (num) => {
+        return num % 2 === 1
+    }
+
+  return (
+    <OpportuniryContainer style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")' }}>
+        <Screen>
+            <TitleText>
+                The Opportunity
+                <TitleUnderLine />
+            </TitleText>
+            <BoxContainer>
+                {items.map((info, index) => {          
+                    return(
+                        <BoxComp
+                        id={index}
+                        number={info.number}
+                        title={info.title}
+                        content={info.content}
+                        isLeft={checkIfIsLeft(index)}
+                        />
+                        )})}
+            </BoxContainer>
+        </Screen>
+    </OpportuniryContainer>
+  )
+}
+
+export default OpportunitySection
