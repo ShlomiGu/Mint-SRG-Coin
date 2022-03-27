@@ -2,12 +2,31 @@ import React from 'react'
 import { styled } from "@mui/material"
 import styledComponent from "styled-components";
 
-const Screen = styled('div')({
-    marginBottom: '5em',
-})
+const Screen = styledComponent.div`
+    width: 80%;
+    align-items: right;
+    margin-left: ${({isLeft}) => (isLeft ? '' : 'auto')};
+    margin-bottom: 2em;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    };
+    opacity: 0.8;
+    &:hover {
+        opacity: 1;
+    };
+`
 
 const GoldNumber = styled('h1')({
+    color: 'var(--unnamed-color-ffcc00)',
+    font: 'normal normal 600 44px/62px Poppins',
+    letterSpacing: '0px',
+    color: '#FFCC00',
+    opacity: 1,
+    margin: 0,
 
+    ['@media (max-width:780px)']: {
+        font: 'normal normal 600 24px/62px Poppins',
+    },
 })
 
 const TextBox = styled('div')({
@@ -52,9 +71,12 @@ const ContentText = styled('p')({
     },
 })
 
-const BoxComp = ({ number, title, content }) => {
+const BoxComp = ({ number, title, content, isLeft }) => {
   return (
-    <Screen>
+    <Screen isLeft={isLeft}>
+        <GoldNumber>
+            { number }
+        </GoldNumber>
         <TextBox>
             <WrapText>
                 <TitleText>

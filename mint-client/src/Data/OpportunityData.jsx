@@ -8,6 +8,11 @@ const items = [
         number: "02",
         title: "The War In Europe",
         content: "Economic sanctions cut off access to international trade, reduce the supply of cash and encourage the use of alternatives such as crypto and gold."
+    },
+    {
+        number: "03",
+        title: "The War In Europe",
+        content: "Economic sanctions cut off access to international trade, reduce the supply of cash and encourage the use of alternatives such as crypto and gold."
     }
 
 ]
