@@ -31,7 +31,6 @@ export const AdvantagesTable = styledComponent.div`
 
 export const Column1 = styledComponent.div`
     background-color: transparent !important;
-    margin-bottom: 15px;
     padding: 0 20px;
     grid-area: col1;
     z-index: 2;
@@ -96,13 +95,13 @@ const WrapImg = styled('div')({
 
 const LogoImg = styled('img')({
     position: 'absolute',
-    height: '80%',
-    marginTop: '10vh',
-    marginLeft: '9vw',
+    height: '85%',
+    marginTop: '4%',
+    marginLeft: '7%',
     ['@media (max-width:780px)']: {
         height: '50vmin',
-        marginTop: '4vw',
-        marginLeft: '4.6vw',
+        marginTop: '5%',
+        marginLeft: '5%',
     },
 })
 
