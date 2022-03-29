@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import EcosystemSection from '../components/Ecosystem/Ecosystem'
 
 class Ecosystem extends Component {
   render() {
     return (
-      <div>Ecosystem</div>
+      <EcosystemSection />
     )
   }
 }
