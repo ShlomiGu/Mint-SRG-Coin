@@ -42,12 +42,11 @@ export const Column1 = styledComponent.div`
 
 export const Column2 = styledComponent.div`
     background-color: transparent !important;
-    margin-bottom: 15px;
-    padding: 0 20px;
+    // margin-bottom: 15px;
+    // padding: 0 20px;
     grid-area: col2;
     z-index: 2;
-    // margin-top: 25vh;
-    margin-left: 2vw;
+    margin-left: -2vw;
 
     @media screen and (max-width: 768px) {
         padding: 0 0;
@@ -95,8 +94,8 @@ const WrapImg = styled('div')({
 
 const LogoImg = styled('img')({
     position: 'absolute',
-    height: '85%',
-    marginTop: '4%',
+    height: '130vmin',
+    marginTop: '4.5%',
     marginLeft: '7%',
     ['@media (max-width:780px)']: {
         height: '50vmin',
@@ -107,7 +106,7 @@ const LogoImg = styled('img')({
 
 const LinesImg = styled('img')({
     // position: 'absolute',
-    height: '100%',
+    height: '156vmin',
     ['@media (max-width:780px)']: {
         height: '60vmin',
     },
@@ -139,7 +138,7 @@ const AdvantagesSection = () => {
                     <Column2>
                         <WrapImg>
                                 <LogoImg className='App-logo' src="assets/logo.png" alt='logo' />
-                            <LinesImg className='Lines-logo' src="assets/DottedTwoLine.svg" alt="lines" />
+                                <LinesImg className='Lines-logo' src="assets/DottedTwoLine.svg" alt="lines" />
                         </WrapImg>
                     </Column2>
                 </AdvantagesTable>
