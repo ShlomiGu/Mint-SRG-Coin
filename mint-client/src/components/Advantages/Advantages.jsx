@@ -8,7 +8,7 @@ const AdvantagesContainer = styled('div')({
     width: '100vw',
     minHeight: '100vh',
     display: 'flex',
-    zIndex: '1',
+    zIndex: 1,
     overflow: 'hidden',
 });
 
@@ -27,17 +27,18 @@ export const AdvantagesTable = styledComponent.div`
         grid-template-areas: 'col2 col2' 'col1 col1';
     }
     place-items: center;
+    z-index: 1;
 `;
 
 export const Column1 = styledComponent.div`
     background-color: transparent !important;
     padding: 0 20px;
     grid-area: col1;
-    z-index: 2;
 
     @media screen and (max-width: 768px) {
         padding: 0 0;
     }
+    z-index: 1;
 `;
 
 export const Column2 = styledComponent.div`

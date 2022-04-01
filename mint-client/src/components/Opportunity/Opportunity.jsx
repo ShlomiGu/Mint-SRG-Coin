@@ -11,6 +11,7 @@ const OpportuniryContainer = styled('div')({
     alignItems: "center",
     zIndex: '1',
     overflow: 'hidden',
+    paddingBottom: '17vh',
 });
 
 const Screen = styled('div')({

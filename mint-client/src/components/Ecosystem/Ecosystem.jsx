@@ -10,8 +10,8 @@ const EcosystemContainer = styled('div')({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    zIndex: '1',
-    overflow: 'hidden',
+    zIndex: 3,
+    // overflow: 'hidden',
     backgroundImage: 'url(assets/DesktopSkyBackground.png)'
 });
 const TitleText = styled('h1')({
@@ -22,13 +22,14 @@ const TitleText = styled('h1')({
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
-    marginTop: "17vh",
-    marginBottom: "5vh",
+    marginBottom: "24vh",
+    marginTop: "-15vh",
     color: "#F1F1F1",
-    zIndex: '1',
+    zIndex: 2,
 
     ['@media (max-width:768px)']: {
         font: 'normal normal bold 26px/45px Poppins',
+        margin: '0.67em 0 0.67em 0',
     },
 })
 
@@ -43,11 +44,12 @@ const TitleUnderLine = styled('div')({
 
 const EcosystemImage = styled('img')({
     alignSelf: "center",
-    width: "35%",
+    width: "36%",
     marginBottom: "5vh",
+    zIndex: 2,
 
     ['@media (min-width:769px)']: {
-        margin: '30vh 0 45vh 0'
+        margin: '10vh 0 45vh 0'
     },
     ['@media (max-width:768px)']: {
         width: "65%",
@@ -63,8 +65,16 @@ const BoxSmallContainer = styled('div')({
     },
 })
 
-const LinesBg = styled('div')({
+const LinesBg = styled('img')({
+    position: 'absolute',
+    zIndex: 1,
+    overflow: 'hidden',
+    width: 'inherit',
 
+    
+    ['@media (max-width:769px)']: {
+        paddingTop: '10vh',
+    },
 })
 
 
@@ -72,6 +82,7 @@ const EcosystemSection = () => {
     return (
         <>
             <EcosystemContainer>
+                <LinesBg src={'/assets/EcosystemLinesBg.svg'} alt='Lines' />
                 <TitleText>
                     The SRG Ecosystem
                     <TitleUnderLine />
@@ -89,19 +100,19 @@ const EcosystemSection = () => {
                             )})}
                 </BoxSmallContainer>
                     {/* NFT Marketplace */}
-                    <BoxEcosystem title={items[0].title} width='100%' margin_top='66%' margin_left='41%' isMobile={false}/>
+                    <BoxEcosystem title={items[0].title} width='100%' margin_top='50%' margin_left='41%' isMobile={false}/>
 
                     {/* Crypto Token */}
-                    <BoxEcosystem title={items[1].title} width='70%' margin_top='34%' margin_left='63%' isMobile={false}/>
+                    <BoxEcosystem title={items[1].title} width='70%' margin_top='18%' margin_left='63%' isMobile={false}/>
                     
                     {/* Unique Reserve */}
-                    <BoxEcosystem title={items[2].title} width='70%' margin_top='21%' isMobile={false}/>
+                    <BoxEcosystem title={items[2].title} width='70%' margin_top='5%' isMobile={false}/>
 
                     {/* NFT Series For Talents */}
-                    <BoxEcosystem title={items[3].title} width='100%' margin_top='37%' margin_right='59%' isMobile={false}/>
+                    <BoxEcosystem title={items[3].title} width='100%' margin_top='21%' margin_right='59%' isMobile={false}/>
 
                     {/* Theorey Rules */}
-                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='68%' margin_right='40%' isMobile={false}/>
+                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='52%' margin_right='40%' isMobile={false}/>
             </EcosystemContainer>
         </>
     );
