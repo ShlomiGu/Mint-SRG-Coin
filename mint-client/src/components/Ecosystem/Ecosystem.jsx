@@ -49,24 +49,24 @@ const EcosystemImage = styled('img')({
     ['@media (min-width:769px)']: {
         margin: '30vh 0 45vh 0'
     },
+    ['@media (max-width:768px)']: {
+        width: "65%",
+    },
 })
 
 const BoxSmallContainer = styled('div')({
-    width: "90%",
-    margin: "auto",
+    width: '90%',
+    margin: 'auto',
     
     ['@media (min-width:769px)']: {
         display: 'none',
     },
 })
 
-const BoxBigContainer = styled('div')({
-    position: 'absolute',
+const LinesBg = styled('div')({
 
-    ['@media (max-width:768px)']: {
-        display: 'none',
-    },
 })
+
 
 const EcosystemSection = () => {
     return (

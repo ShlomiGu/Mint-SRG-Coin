@@ -28,7 +28,7 @@ const Screen = styled('div')((props) => ({
         font: 'normal normal 600 20px/40px Poppins',
     },
     ['@media (max-width:769px)']: {
-        width: '100%',
+        width: '95%',
         marginBottom: '15px',
         font: 'normal normal 600 18px/29px Poppins',
     },
@@ -41,8 +41,7 @@ const Screen = styled('div')((props) => ({
         },
         ['@media (max-width:769px)']: {
             width: '100%',
-            marginBottom: '15px',
-            font: 'normal normal 600 21px/29px Poppins',
+            font: 'normal normal 600 20px/29px Poppins',
         },
     },
 }))

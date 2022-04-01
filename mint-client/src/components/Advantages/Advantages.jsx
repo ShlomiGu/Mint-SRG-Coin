@@ -42,14 +42,13 @@ export const Column1 = styledComponent.div`
 
 export const Column2 = styledComponent.div`
     background-color: transparent !important;
-    // margin-bottom: 15px;
-    // padding: 0 20px;
     grid-area: col2;
     z-index: 2;
-    margin-left: -2vw;
+    margin-left: 10vw;
 
     @media screen and (max-width: 768px) {
         padding: 0 0;
+        margin: 0;
         margin-top: 2vh;
     }
 `;
@@ -94,9 +93,9 @@ const WrapImg = styled('div')({
 
 const LogoImg = styled('img')({
     position: 'absolute',
-    height: '130vmin',
-    marginTop: '4.5%',
-    marginLeft: '7%',
+    height: '84vmin',
+    marginTop: '3.3%',
+    marginLeft: '6%',
     ['@media (max-width:780px)']: {
         height: '50vmin',
         marginTop: '5%',
@@ -106,7 +105,7 @@ const LogoImg = styled('img')({
 
 const LinesImg = styled('img')({
     // position: 'absolute',
-    height: '156vmin',
+    height: '100vmin',
     ['@media (max-width:780px)']: {
         height: '60vmin',
     },
