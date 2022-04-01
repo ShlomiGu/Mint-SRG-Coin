@@ -125,8 +125,7 @@ const AdvantagesSection = () => {
                             <TitleText>
                                 {items.title}
                                 <TitleUnderLine/>
-                            </TitleText>
-                            
+                            </TitleText>   
                             <RowComp number="01" desc={items.item1} />
                             <RowComp number="02" desc={items.item2} />            
                             <RowComp number="03" desc={items.item3} />            
