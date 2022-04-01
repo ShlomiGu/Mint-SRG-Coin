@@ -9,6 +9,7 @@ const BoxBigContainer = styled('div')((props) => ({
     marginLeft: props.margin_left,
     marginBottom: props.margin_bottom,
     marginRight: props.margin_right,
+    zIndex: 1,
 
     ['@media (max-width:768px)']: {
         position: 'unset',
@@ -21,7 +22,7 @@ const Screen = styled('div')((props) => ({
     alignItems: 'right',
     margin: 'auto',
     font: 'normal normal 600 24px/40px Poppins',
-    opacity: 1,
+    opacity: 0.9,
     transition: 'all 0.1s ease-in-out',
 
     ['@media (max-width:1410px)']: {
@@ -35,6 +36,7 @@ const Screen = styled('div')((props) => ({
 
     ['&:hover']: {
         cursor: 'pointer',
+        opacity: 1,
         font: 'normal normal 600 27px/40px Poppins',
         ['@media (max-width:1410px)']: {
             font: 'normal normal 600 23px/40px Poppins',
