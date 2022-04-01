@@ -11,19 +11,35 @@ const WrapText = styled.div`
 const NumberText = styled.h1`
   color: #ffcc00;
   font-size: 62px Poppins;
+  font: bold normal 600 44px/62px Poppins;
   margin: 0;
   margin-right: 10px;
+
+  @media screen and (max-width: 1441px) {
+    font: bold normal normal 24px/40px Poppins;;
+  }
+
+  @media screen and (max-width: 768px) {
+    font: bold normal normal 20px/40px Poppins;;
+  }
 `;
 
 const Description = styled.p`
   font-family: 'Poppins';
   color: var(--unnamed-color-f1f1f1);
+  font: normal normal normal 28px/44px Poppins;
   text-align: left;
-  font-size: 40px Poppins;;
   letter-spacing: 0px;
-  /* color: #F1F1F1; */
   opacity: 1;
   margin: 0;
+
+  @media screen and (max-width: 1441px) {
+    font: normal normal normal 24px/40px Poppins;;
+  };
+
+  @media screen and (max-width: 768px) {
+    font: normal normal normal 13px/22px Poppins;;
+  };
 `;
 
 const RowComp = ({ number, desc }) => {
@@ -31,7 +47,7 @@ const RowComp = ({ number, desc }) => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div style={{marginBottom: '1em'}}>
+    <div style={{marginBottom: '1.5em'}}>
       <WrapText data-aos="fade-right">
         <NumberText>{number}</NumberText>
         <Description>{desc}</Description>

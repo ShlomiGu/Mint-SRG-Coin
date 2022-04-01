@@ -20,20 +20,30 @@ const Screen = styled('div')((props) => ({
     width: props.width,
     alignItems: 'right',
     margin: 'auto',
-    
-    ['&:hover']: {
-        // ['@media (min-width:769px)']: {
-        //     width: '75%',
-        // },
-        cursor: 'pointer',
+    font: 'normal normal 600 24px/40px Poppins',
+    opacity: 1,
+    transition: 'all 0.1s ease-in-out',
+
+    ['@media (max-width:1410px)']: {
+        font: 'normal normal 600 20px/40px Poppins',
+    },
+    ['@media (max-width:769px)']: {
+        width: '95%',
+        marginBottom: '15px',
+        font: 'normal normal 600 18px/29px Poppins',
     },
 
-    ['@media (max-width:780px)']: {
-        width: '100%',
-        marginBottom: '15px',
+    ['&:hover']: {
+        cursor: 'pointer',
+        font: 'normal normal 600 27px/40px Poppins',
+        ['@media (max-width:1410px)']: {
+            font: 'normal normal 600 23px/40px Poppins',
+        },
+        ['@media (max-width:769px)']: {
+            width: '100%',
+            font: 'normal normal 600 20px/29px Poppins',
+        },
     },
-    opacity: 1,
-    transition: 'all 0.3s ease-in-out',
 }))
 
 
@@ -63,18 +73,10 @@ const WrapText = styledComp.div`
 
 const TitleText = styledComp.div`
     color: var(--unnamed-color-f1f1f1);
-    font: normal normal 600 24px/40px Poppins;
     letter-spacing: 0px;
     text-transform: capitalize;
     opacity: 1;
     margin: 0;
-
-    @media screen and (max-width: 1441px) {
-        font: normal normal 600 20px/40px Poppins;
-    };
-    @media screen and (max-width: 768px) {
-        font: normal normal 600 18px/29px Poppins;
-    };
 `;
 
 const ContentText = styledComp.p`
