@@ -93,18 +93,15 @@ const WrapImg = styled('div')({
 
 const LogoImg = styled('img')({
     position: 'absolute',
-    height: '84vmin',
-    marginTop: '3.3%',
-    marginLeft: '6%',
+    height: '100vmin',
+    marginLeft: '3%',
     ['@media (max-width:780px)']: {
-        height: '50vmin',
-        marginTop: '5%',
-        marginLeft: '5%',
+        height: '60vmin',
+        margin: '0',
     },
 })
 
 const LinesImg = styled('img')({
-    // position: 'absolute',
     height: '100vmin',
     ['@media (max-width:780px)']: {
         height: '60vmin',
@@ -135,7 +132,7 @@ const AdvantagesSection = () => {
                     </Column1>
                     <Column2>
                         <WrapImg>
-                                <LogoImg className='App-logo' src="assets/logo.png" alt='logo' />
+                                <LogoImg className='App-logo' src="assets/BigLogo.svg" alt='logo' />
                                 <LinesImg className='Lines-logo' src="assets/DottedTwoLine.svg" alt="lines" />
                         </WrapImg>
                     </Column2>
