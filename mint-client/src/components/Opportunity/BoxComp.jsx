@@ -10,10 +10,6 @@ const Screen = styledComponent.div`
     @media screen and (max-width: 768px) {
         width: 100%;
     };
-    opacity: 0.8;
-    &:hover {
-        opacity: 1;
-    };
 `
 
 const GoldNumber = styled('h1')({
@@ -35,7 +31,11 @@ const TextBox = styled('div')({
     background: '#060707 0% 0% no-repeat padding-box',
     border: '2px solid #F1F1F1',
     borderRadius: '15px',
-    opacity: 1,
+    opacity: 0.6,
+    ['&:hover']: {
+        opacity: 1,
+        boxShadow: '2px 2px 15px #FFCC00',
+    },
 })
 
 const WrapText = styled('div')({
