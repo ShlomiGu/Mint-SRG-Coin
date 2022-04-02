@@ -54,6 +54,27 @@ const BoxContainer = styled('div')({
     },
 })
 
+const CubeImg = styled('img')({
+    position: 'absolute',
+    left: '80vw',
+    top: '250vh',
+    ['@media (max-width:780px)']: {
+        left: '60vw',
+        top: '250vh',
+    },
+})
+
+const LinesBg = styled('img')({
+    position: 'absolute',
+    overflow: 'hidden',
+    width: 'inherit',
+    paddingTop: '5vh',
+    
+    ['@media (max-width:769px)']: {
+        paddingTop: '25vh',
+    },
+})
+
 const OpportunitySection = () => {
     const checkIfIsLeft = (num) => {
         return num % 2 === 1
@@ -61,6 +82,8 @@ const OpportunitySection = () => {
 
   return (
     <OpportuniryContainer style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")' }}>
+        <LinesBg src={'/assets/OpportunityLinesBg.svg'} alt='Lines' />
+        <CubeImg className="Cube-2" src={"/assets/Cube2.png"} alt="cube2" />
         <Screen>
             <TitleText>
                 The Opportunity
