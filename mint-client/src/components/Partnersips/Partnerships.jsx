@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PartnersImages from '../../Data/Partnerships';
+import CarouselPartners from './CarouselPartners';
 
 const PartnershipsContainer = styled.div`
     background-color: #000 !important;
@@ -13,16 +14,29 @@ const PartnershipsContainer = styled.div`
     overflow: hidden;
 `;
 
-const SponsorsPeopleDiv = styled.div`
+const PartnersBigDiv = styled.div`
   background-color: transparent !important;
   display: flex;
   flex-wrap: wrap;
   width: 80%;
   margin: auto;
   justify-content: center;
+
+  @media screen and (max-width: 768px) {
+      display: none;
+  }
 `;
 
-const SponsorsPerson = styled.img`
+const PartnerSmallDiv = styled.div`
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    @media screen and (min-width: 769px) {
+        display: none;
+    } 
+`
+
+export const SponsorsPerson = styled.img`
   background-color: transparent !important;
   width: 10em;
   border-radius: 0.5em;
@@ -65,7 +79,7 @@ const PartnershipsSection = () => {
             Partnerships
             <TitleUnderLine />
         </TitleText>
-        <SponsorsPeopleDiv>
+        <PartnersBigDiv>
             {PartnersImages.map((info, index) => {          
                 return(
                     <SponsorsPerson
@@ -73,7 +87,10 @@ const PartnershipsSection = () => {
                         alt='ss'
                     />
                     )})}
-        </SponsorsPeopleDiv>
+        </PartnersBigDiv>
+        <PartnerSmallDiv>
+            <CarouselPartners />
+        </PartnerSmallDiv>
     </PartnershipsContainer>
   )
 }
