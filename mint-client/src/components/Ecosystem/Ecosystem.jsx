@@ -11,7 +11,6 @@ const EcosystemContainer = styled('div')({
     flexDirection: "column",
     alignItems: "center",
     zIndex: 3,
-    // overflow: 'hidden',
     backgroundImage: 'url(assets/DesktopSkyBackground.png)'
 });
 const TitleText = styled('h1')({

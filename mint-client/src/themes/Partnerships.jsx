@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import PartnershipsSection from '../components/Partnersips/Partnerships'
 
 class Partnerships extends Component {
   render() {
     return (
-      <div>Partnerships</div>
+      <PartnershipsSection />
     )
   }
 }
