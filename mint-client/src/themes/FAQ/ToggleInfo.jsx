@@ -9,7 +9,11 @@ const StyledBox = styled("div")((props) => ({
   color: "#F1F1F1",
   display: "flex",
   transition: "border-radius 1s ease",
-  marginBottom: !props.isOpen ? '1vh' : 0
+  marginBottom: !props.isOpen ? '1vh' : 0,
+
+  ['@media (max-width:768px)']: {
+    width: "90vw",
+  },
 }));
 
 const TextBox = styled(Grid)({
@@ -17,12 +21,20 @@ const TextBox = styled(Grid)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
+
+  ['@media (max-width:768px)']: {
+    width: "90%",
+  },
 });
 
 const TitleBox = styled(Typography)({
   fontSize: "1.5rem",
   fontWeight: "bold",
   marginLeft: "30px",
+
+  ['@media (max-width:768px)']: {
+    fontSize: "1.3rem",
+  },
 });
 
 const SubTitleBox = styled("div")({
@@ -42,18 +54,26 @@ const OpenButton = styled("img")({
 });
 
 const ContentBox = styled(Grid)({
-  height: "200px",
+  minHeight: "200px",
   width: "50vw",
   backgroundColor: "#1F1E21",
   borderRadius: "0 0 15px 15px",
-  marginBottom: '1vh'
+  marginBottom: '1vh',
+
+  ['@media (max-width:768px)']: {
+    width: "90vw",
+  },
 });
 
 const ContentText = styled(Typography)({
   color: '#F1F1F1',
   marginLeft: '30px',
   paddingTop: '30px',
-  fontSize: '1.2rem'
+  fontSize: '1.2rem',
+
+  ['@media (max-width:768px)']: {
+    fontSize: '1rem',
+  },
 })
 
 const ToggleInfo = ({ title, subTitle, content, id, openKey, setOpenKey }) => {
