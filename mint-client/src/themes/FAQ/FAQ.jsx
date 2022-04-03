@@ -34,6 +34,7 @@ const TitleUnderLine = styled("div")({
 const RightsResevedSection = styled(Grid)({
   display: 'flex',
   flexDirection: 'column',
+  marginBottom: '5vh',
 });
 
 const RightsReservedText = styled(Typography)({
@@ -50,7 +51,7 @@ const SeperationLine = styled("div")({
 });
 
 const ContentContainer = styled(Grid)({
-  height: "58vh",
+  minHeight: "52vh",
 });
 
 const FAQ = () => {
