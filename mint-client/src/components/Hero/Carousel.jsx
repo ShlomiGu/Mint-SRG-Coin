@@ -6,7 +6,7 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 import { Grid } from "@mui/material";
 
-const Carousel = () => {
+const Carousel = ({ buttons }) => {
   const slider = useRef(null);
 
   const handleForwardClick = () => {
@@ -17,15 +17,20 @@ const Carousel = () => {
     slider.current.slickPrev();
   };
   return (
-    <Grid item container xs={12} justifyContent={'flex-end'}>
-      <Grid item xs={1} display={'flex'} alignItems={'center'}>
-        <div>
-          <CarouselNavButton icon={faAngleLeft} onClick={handlePrevClick}/>
-          <CarouselNavButton icon={faAngleRight} onClick={handleForwardClick} />
+    <Grid item container xs={12} justifyContent={"flex-end"}>
+      { buttons &&
+        <div style={{ marginRight: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <CarouselNavButton icon={faAngleLeft} onClick={handlePrevClick} />
+        <CarouselNavButton icon={faAngleRight} onClick={handleForwardClick} />
         </div>
-      </Grid>
+      }
       <Grid item xs={6}>
-        <Slider arrows={false} slidesToShow={2.4} ref={slider} className="carousel" >
+        <Slider
+          arrows={false}
+          slidesToShow={2.4}
+          ref={slider}
+          className="carousel"
+        >
           <CarouselItem
             title={"Article Title"}
             image={"/assets/logo.png"}
