@@ -9,7 +9,7 @@ const OpportuniryContainer = styled('div')({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    zIndex: '1',
+    zIndex: 1,
     overflow: 'hidden',
     paddingBottom: '17vh',
 });
@@ -69,6 +69,8 @@ const LinesBg = styled('img')({
     overflow: 'hidden',
     width: 'inherit',
     paddingTop: '5vh',
+    
+    // zIndex: 0,
     
     ['@media (max-width:769px)']: {
         paddingTop: '25vh',

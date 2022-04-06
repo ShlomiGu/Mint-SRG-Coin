@@ -10,6 +10,7 @@ const Screen = styledComponent.div`
     @media screen and (max-width: 768px) {
         width: 100%;
     };
+    z-index: 1;
 `
 
 const GoldNumber = styled('h1')({
@@ -31,7 +32,8 @@ const TextBox = styled('div')({
     background: '#060707 0% 0% no-repeat padding-box',
     border: '2px solid #F1F1F1',
     borderRadius: '15px',
-    opacity: 0.6,
+    opacity: 0.7,
+    // zIndex: -1,
     ['&:hover']: {
         opacity: 1,
         boxShadow: '2px 2px 15px #FFCC00',
