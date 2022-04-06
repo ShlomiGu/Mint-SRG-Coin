@@ -6,7 +6,7 @@ import Ecosystem from "../themes/Ecosystem";
 import FAQ from "../themes/FAQ/FAQ";
 import Opportunity from "../themes/Opportunity";
 import Partnerships from "../themes/Partnerships";
-import Roadmap from "../themes/Roadmap";
+import RoadmapContainer from "../components/Roadmap/RoadmapContainer";
 
 function Home() {
     return (
@@ -15,7 +15,7 @@ function Home() {
             <AboutUs />
             <Opportunity />
             <Ecosystem />
-            <Roadmap />
+            <RoadmapContainer />
             <Advantages />
             <Partnerships />
             <FAQ />
