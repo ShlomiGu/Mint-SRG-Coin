@@ -1,5 +1,6 @@
 import React from "react";
 import HeroSection from "../components/Hero/Hero";
+import AboutUs from "../themes/AboutUs";
 import Advantages from "../themes/Advantages";
 import Ecosystem from "../themes/Ecosystem";
 import FAQ from "../themes/FAQ/FAQ";
@@ -11,6 +12,7 @@ function Home() {
     return (
         <>
             <HeroSection />
+            <AboutUs />
             <Opportunity />
             <Ecosystem />
             <Roadmap />
