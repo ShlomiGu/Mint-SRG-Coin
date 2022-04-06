@@ -128,7 +128,7 @@ const Roadmap = () => {
                       flexDirection: "column",
                     }}
                   >
-                    <ToggleInfo
+                    {/* <ToggleInfo
                       key={`info:${index}`}
                       id={index}
                       openKey={openKey}
@@ -136,7 +136,7 @@ const Roadmap = () => {
                       title={roadmapEvent.title}
                       subTitle={roadmapEvent.description}
                       content={roadmapEvent.content}
-                    ></ToggleInfo>
+                    ></ToggleInfo> */}
                   </div>
                 </RoadmapSection>
               );
