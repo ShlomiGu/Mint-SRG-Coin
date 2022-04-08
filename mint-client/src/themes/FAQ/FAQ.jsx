@@ -18,7 +18,7 @@ const Title = styled("div")({
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
-  marginTop: "17vh",
+  marginTop: "11vw",
   marginBottom: "5vh",
   color: "#F1F1F1",
 });

@@ -13,7 +13,7 @@ const NavButtonContainer = styled("div")((props) => ({
   justifyContent: "center",
   alignItems: "center",
   cursor: "pointer",
-  marginTop: '10px'
+  marginTop: '10px',
 }));
 
 const ArrowImage = styled(FontAwesomeIcon)((props) => ({

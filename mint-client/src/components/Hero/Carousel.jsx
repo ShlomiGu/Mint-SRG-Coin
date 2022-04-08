@@ -5,6 +5,26 @@ import CarouselNavButton from "./CarouselNavButton";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 import { Grid } from "@mui/material";
+import styled from 'styled-components'
+
+const CarouselContainer = styled.div`
+  display: flex;
+
+  @media screen and (min-width: 769px) {
+    justify-content: flex-end;
+    margin-left: 93vw;
+  }
+`;
+
+const WrapButtom = styled.div`
+  display: block;
+  z-index: 1;
+  margin-right: 2vw;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`
 
 const Carousel = () => {
   const slider = useRef(null);
@@ -17,38 +37,40 @@ const Carousel = () => {
     slider.current.slickPrev();
   };
   return (
-    <Grid item container xs={12} justifyContent={'flex-end'}>
+    // <Grid item container xs={12} justifyContent={'flex-end'}>
+      <CarouselContainer>        
       <Grid item xs={1} display={'flex'} alignItems={'center'}>
-        <div>
+        <WrapButtom>
           <CarouselNavButton icon={faAngleLeft} onClick={handlePrevClick}/>
           <CarouselNavButton icon={faAngleRight} onClick={handleForwardClick} />
-        </div>
+        </WrapButtom>
       </Grid>
       <Grid item xs={6}>
         <Slider arrows={false} slidesToShow={2.4} ref={slider} className="carousel" >
+            <CarouselItem
+              title={"Article Title"}
+              image={"/assets/logo.png"}
+            ></CarouselItem>
           <CarouselItem
             title={"Article Title"}
             image={"/assets/logo.png"}
-          ></CarouselItem>
+            ></CarouselItem>
           <CarouselItem
             title={"Article Title"}
             image={"/assets/logo.png"}
-          ></CarouselItem>
+            ></CarouselItem>
           <CarouselItem
             title={"Article Title"}
             image={"/assets/logo.png"}
-          ></CarouselItem>
+            ></CarouselItem>
           <CarouselItem
             title={"Article Title"}
             image={"/assets/logo.png"}
-          ></CarouselItem>
-          <CarouselItem
-            title={"Article Title"}
-            image={"/assets/logo.png"}
-          ></CarouselItem>
+            ></CarouselItem>
         </Slider>
       </Grid>
-    </Grid>
+      </CarouselContainer>
+    /* </Grid> */
   );
 };
 

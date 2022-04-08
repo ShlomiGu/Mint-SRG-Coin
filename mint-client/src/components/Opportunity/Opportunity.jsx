@@ -12,6 +12,10 @@ const OpportuniryContainer = styled('div')({
     zIndex: 1,
     overflow: 'hidden',
     paddingBottom: '17vh',
+
+    ['@media (max-width:768px)']: {
+        paddingBottom: '7vh',
+    },
 });
 
 const Screen = styled('div')({
@@ -32,9 +36,10 @@ const TitleText = styled('h1')({
     marginBottom: "5vh",
     color: "#F1F1F1",
 
-    ['@media (max-width:780px)']: {
+    ['@media (max-width:768px)']: {
         font: 'normal normal bold 26px/45px Poppins',
-        marginLeft: '5%'
+        marginLeft: '5%',
+        marginTop: "7vh",
     },
 })
 
@@ -73,7 +78,7 @@ const LinesBg = styled('img')({
     // zIndex: 0,
     
     ['@media (max-width:769px)']: {
-        paddingTop: '25vh',
+        paddingTop: '15vh',
     },
 })
 
