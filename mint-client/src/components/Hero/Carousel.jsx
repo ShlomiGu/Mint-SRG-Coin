@@ -10,16 +10,17 @@ import styled from 'styled-components'
 const CarouselContainer = styled.div`
   display: flex;
 
-
   @media screen and (min-width: 769px) {
     justify-content: flex-end;
+    margin-left: 93vw;
   }
 `;
 
 const WrapButtom = styled.div`
   display: block;
   z-index: 1;
-  
+  margin-right: 2vw;
+
   @media screen and (max-width: 768px) {
     display: none;
   }
