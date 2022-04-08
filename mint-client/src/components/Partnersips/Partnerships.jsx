@@ -21,6 +21,7 @@ const PartnersBigDiv = styled.div`
   width: 80%;
   margin: auto;
   justify-content: center;
+  margin-bottom: 3vh;
 
   @media screen and (max-width: 768px) {
       display: none;

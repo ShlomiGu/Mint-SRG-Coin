@@ -74,12 +74,11 @@ const LogoImage = styled("img")({
 
 const SunImg = styled('img')({
   position: 'absolute',
-  height: '100vmin',
-  // width: 'inherit',
-  top: "-3vh",
+  height: '130vmin',
+  top: "0",
   right: "0",
   ['@media (max-width:780px)']: {
-      // height: '49vmin',
+    height: '110vmin',
   },
 });
 
