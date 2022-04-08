@@ -39,11 +39,14 @@ const BuyButton = styled(Button)({
 
 const TitleText = styled(Typography)({
   color: "white",
-  font: "normal normal bold 60px/82px Poppins",
+  font: "normal normal bold 48px/82px Poppins",
   fontWeight: "bold",
   maxWidth: "1400px",
   zIndex: 1,
 
+  ['@media (max-width:1440px)']: {
+    font: "normal normal bold 38px/70px Poppins;",
+  },  
   ['@media (max-width:768px)']: {
     font: "normal normal bold 26px/45px Poppins",
   },  
@@ -53,6 +56,10 @@ const GoldBarImgae = styled("img")({
   height: "4.5rem",
   marginLeft: "20px",
   verticalAlign: "middle",
+
+  ['@media (max-width:1440px)']: {
+    font: "3.5rem",
+  },  
   ['@media (max-width:768px)']: {
     height: "3rem",
   },  
@@ -74,13 +81,38 @@ const LogoImage = styled("img")({
 
 const SunImg = styled('img')({
   position: 'absolute',
-  height: '130vmin',
+  height: '110vmin',
   top: "0",
   right: "0",
-  ['@media (max-width:780px)']: {
+  ['@media (max-width:769px)']: {
+    height: '80vmin',
+  },
+  ['@media (max-width:425px)']: {
     height: '110vmin',
   },
 });
+
+const CubeImg1 = styled('img')((props) => ({
+  position: 'absolute',
+  left: '34vw',
+  top: '22vh',
+  ['@media (max-width:768px)']: {
+    left: '12vw',
+    height: '33vmin',
+    top: '24vh',
+  },
+}))
+
+const CubeImg2 = styled('img')((props) => ({
+  position: 'absolute',
+  left: '75vw',
+  top: '70vh',
+  ['@media (max-width:768px)']: {
+    // left: '60vw',
+    height: '13vmin',
+    top: '64vh',
+  },
+}))
 
 const HeroSection = () => {
   return (
@@ -89,13 +121,15 @@ const HeroSection = () => {
       style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")', backgroundSize:'cover', backgroundRepeat: 'no-repeat' }}
     >
       <SunImg src="assets/Main.svg" alt="sun" />
+      <CubeImg1 className="Cube-1" src={"/assets/Cube1.png"} alt="cube1" />
+      <CubeImg2 className="Cube-2" src={"/assets/Cube2.png"} alt="cube2" />
       <WrapLogo>
         <LogoImage src={"assets/logo.png"} alt="logo" />
       </WrapLogo>
       <TitleText>
         <span>
           From the dawn of history mankind has given value to coins through a
-          backup reserve. The oldest and most reliable being
+          backup reserve.<br/> The oldest and most reliable being
         </span>
         <GoldBarImgae src="assets/goldbar.png" alt="goldbar" />
       </TitleText>
