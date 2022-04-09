@@ -49,7 +49,7 @@ const DateText = styled(Typography)({
 });
 
 const RoadmapSection = styled("div")({
-  paddingTop: "50px",
+  paddingTop: "90px",
   marginLeft: "55%",
   width: "100%",
   display: "flex",
@@ -101,7 +101,7 @@ const Roadmap = () => {
     var moveIndicator = function () {
       var viewportHeight = window.innerHeight;
       var hasScrolled = window.pageYOffset;
-      const scrolledFurther = hasScrolled - roadmapOffset + viewportHeight / 3;
+      const scrolledFurther = hasScrolled - roadmapOffset + viewportHeight / 4;
 
       if (scrolledFurther && scrolledFurther > 0) {
         if (scrolledFurther > roadmap.clientHeight) {
@@ -159,7 +159,7 @@ const Roadmap = () => {
               );
             }
           })}
-          <div style={{ height: "50px" }}></div>
+          <div style={{ height: "90px" }}></div>
         </div>
       </RoadmapContainer>
       <FinalRoadmapSection

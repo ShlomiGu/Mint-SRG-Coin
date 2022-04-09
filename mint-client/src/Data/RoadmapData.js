@@ -26,7 +26,8 @@ const data = [
     {
         date: 'March 2023',
         title: 'ROUND A fundraising for METAVERSE',
-        description: '$300 million fund raising'
+        description: '$300 million fund raising',
+        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue nisi ac ante fringilla, eget dictum sapien sollicitudin. Phasellus augue ante, fermentum in erat a, egestas faucibus arcu"
     },
 ]
 

@@ -3,14 +3,14 @@ import { Grid, styled } from "@mui/material";
 import Roadmap from "./Roadmap";
 
 const Screen = styled("div")({
+  position: 'relative',
   width: "100vw",
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   backgroundImage: "url(assets/DesktopSkyBackground.png)",
-  backgroundRepeat: 'revert',
-  
+  backgroundRepeat: "revert",
 });
 
 const Title = styled("div")({
@@ -19,8 +19,8 @@ const Title = styled("div")({
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
-  marginTop: "17vh",
   color: "#F1F1F1",
+  zIndex: 10,
 });
 
 const TitleUnderLine = styled("div")({
@@ -29,25 +29,47 @@ const TitleUnderLine = styled("div")({
   width: "50px",
   alignSelf: "center",
   marginTop: "15px",
+  zIndex: 10,
 });
 
 const ContentContainer = styled(Grid)({
   minHeight: "52vh",
 });
 
+const CubeImg1 = styled('img')({
+  position: 'absolute',
+  left: 0,
+  top: '20vh',
+  ['@media (max-width:768px)']: {
+    display: 'none'
+  },
+})
+
+const CubeImg2 = styled('img')({
+  position: 'absolute',
+  left: '15%',
+  top: '50%',
+  ['@media (max-width:768px)']: {
+    left: '5vw',
+    height: '13vmin',
+    top: '64vh',
+  },
+})
+
 const RoadmapContainer = () => {
   return (
     <Screen>
+      <CubeImg1 className="Cube-1" src={"/assets/Cube1.png"} alt="cube1" />
+      <CubeImg2 className="Cube-2" src={"/assets/Cube2.png"} alt="cube2" />
+
       <Title>
         The Roadmap
         <TitleUnderLine />
       </Title>
       <ContentContainer>
-        <Roadmap/>
+        <Roadmap />
       </ContentContainer>
-      <div style={{ height : '200px' }}>
-
-      </div>
+      <div style={{ height: "200px" }} />
     </Screen>
   );
 };

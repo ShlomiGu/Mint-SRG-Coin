@@ -5,6 +5,7 @@ const ToggleContainer = styled('div')((props) => ({
   borderRadius: '15px',
   boxShadow: props.isOpen ? "0 1px 10px 1px #FFCC00" : 0,
   transition: "box-shadow 1s ease",
+  marginTop: '-30px'
 }))
 
 const StyledBox = styled("div")((props) => ({
