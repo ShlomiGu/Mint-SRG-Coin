@@ -45,6 +45,9 @@ const RoadmapContainer = () => {
       <ContentContainer>
         <Roadmap/>
       </ContentContainer>
+      <div style={{ height : '200px' }}>
+
+      </div>
     </Screen>
   );
 };
