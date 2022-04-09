@@ -2,7 +2,7 @@ import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import data from "../../Data/RoadmapData";
-import ToggleInfo from "../../themes/FAQ/ToggleInfo";
+import ToggleInfo from "./ToggleInfo";
 
 const YellowCircle = styled("div")({
   border: "2px solid #FC0",
@@ -31,28 +31,43 @@ const Wrapper = styled("div")({
   flexDirection: "column",
   alignItems: "center",
   marginTop: "40px",
-  width: "900px",
+  // width: "900px",
 });
 
 const DateText = styled(Typography)({
+  position: "absolute",
+  left: "calc(50% - 185px)",
   color: "#FFF",
   fontSize: "1.2rem",
   fontWeight: 600,
   width: "150px",
-  textAlign: 'right'
+  textAlign: "right",
+  ["@media (max-width:768px)"]: {
+    left: "calc(50% - 170px)",
+    fontSize: "1rem",
+  },
 });
 
 const RoadmapSection = styled("div")({
   paddingTop: "50px",
-  marginLeft: "25%",
+  marginLeft: "55%",
   width: "100%",
   display: "flex",
   flexDirection: "row",
+  ["@media (max-width:768px)"]: {
+    marginLeft: "65%",
+  },
 });
+
+const FinalRoadmapSection = styled(RoadmapSection)({
+  marginLeft: '110%',
+  ["@media (max-width:768px)"]: {
+    marginLeft: "130%",
+  },
+})
 
 const RoadmapContainer = styled("div")({
   position: "relative",
-  width: "900px",
   marginLeft: "auto",
   marginRight: "auto",
 });
@@ -72,7 +87,6 @@ const RoadmapLineBackground = styled(RoadmapLine)({
 const RoadmapLineColor = styled(RoadmapLine)({
   backgroundColor: "#FC0",
   boxShadow: "0 1px 10px 1px #FFCC00",
-
 });
 
 const Roadmap = () => {
@@ -87,7 +101,7 @@ const Roadmap = () => {
     var moveIndicator = function () {
       var viewportHeight = window.innerHeight;
       var hasScrolled = window.pageYOffset;
-      const scrolledFurther = hasScrolled - roadmapOffset + viewportHeight / 4;
+      const scrolledFurther = hasScrolled - roadmapOffset + viewportHeight / 3;
 
       if (scrolledFurther && scrolledFurther > 0) {
         if (scrolledFurther > roadmap.clientHeight) {
@@ -116,19 +130,19 @@ const Roadmap = () => {
         <RoadmapLineColor className="roadmap__draw" />
         <div className="roadmap__list">
           {data.map((roadmapEvent, index) => {
-            // if (index + 1 !== data.length) {
+            if (index + 1 !== data.length) {
               return (
                 <RoadmapSection key={`roadmap:${index}`}>
                   <DateText key={`date:${index}`}>{roadmapEvent.date}</DateText>
                   <YellowRoadmapPoints key={`dot:${index}`} />
                   <div
                     style={{
-                      marginLeft: "100px",
+                      marginLeft: "00px",
                       display: "flex",
                       flexDirection: "column",
                     }}
                   >
-                    {/* <ToggleInfo
+                    <ToggleInfo
                       key={`info:${index}`}
                       id={index}
                       openKey={openKey}
@@ -136,41 +150,44 @@ const Roadmap = () => {
                       title={roadmapEvent.title}
                       subTitle={roadmapEvent.description}
                       content={roadmapEvent.content}
-                    ></ToggleInfo> */}
+                      width={"50%"}
+                      fontSize={"0.75rem"}
+                      titleSize={"0.9rem"}
+                    ></ToggleInfo>
                   </div>
                 </RoadmapSection>
               );
-            // }
+            }
           })}
+          <div style={{ height: "50px" }}></div>
         </div>
-        {/* <RoadmapSection
-          style={{ paddingTop: 0 }}
-          key={`roadmap:${data.length - 1}`}
-        >
-          <DateText key={`date:${data.length - 1}`}>
-            {data[data.length - 1].date}
-          </DateText>
-          <YellowRoadmapPoints key={`dot:${data.length - 1}`} />
-          <div
-            style={{
-              marginLeft: "100px",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <ToggleInfo
-              key={`info:${data.length - 1}`}
-              id={data.length - 1}
-              openKey={openKey}
-              setOpenKey={setOpenKey}
-              title={data[data.length - 1].title}
-              subTitle={data[data.length - 1].description}
-              content={data[data.length - 1].content}
-              width={"100%"}
-            ></ToggleInfo>
-          </div>
-        </RoadmapSection> */}
       </RoadmapContainer>
+      <FinalRoadmapSection
+        style={{ paddingTop: 0 }}
+        key={`roadmap:${data.length - 1}`}
+      >
+        <DateText key={`date:${data.length - 1}`}>
+          {data[data.length - 1].date}
+        </DateText>
+        <YellowRoadmapPoints key={`dot:${data.length - 1}`} />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <ToggleInfo
+            key={`info:${data.length - 1}`}
+            id={data.length - 1}
+            openKey={openKey}
+            setOpenKey={setOpenKey}
+            title={data[data.length - 1].title}
+            subTitle={data[data.length - 1].description}
+            content={data[data.length - 1].content}
+            width={"100%"}
+          ></ToggleInfo>
+        </div>
+      </FinalRoadmapSection>
     </Wrapper>
   );
 };

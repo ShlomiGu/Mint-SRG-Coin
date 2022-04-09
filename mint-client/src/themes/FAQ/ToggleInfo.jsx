@@ -1,5 +1,5 @@
 import { Collapse, Fade, Grid, styled, Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 
 const StyledBox = styled("div")((props) => ({
   width: "50vw",
@@ -51,6 +51,9 @@ const OpenButtonBox = styled("div")({
 const OpenButton = styled("img")({
   position: "absolute",
   alignSelf: "center",
+  ['@media (max-width:768px)']: {
+    width: '20px'
+  }
 });
 
 const ContentBox = styled(Grid)({

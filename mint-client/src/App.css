@@ -34,6 +34,15 @@
   align-items: center;
 }
 
+@media screen and (max-width: 768px) {
+  .carousel-item{
+    height: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

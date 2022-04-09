@@ -30,7 +30,7 @@ const PartnersBigDiv = styled.div`
 
 const PartnerSmallDiv = styled.div`
     width: 80%;
-    margin: auto;
+    margin: none;
     justify-content: center;
     @media screen and (min-width: 769px) {
         display: none;
@@ -41,7 +41,7 @@ export const SponsorsPerson = styled.img`
   background-color: transparent !important;
   width: 10em;
   border-radius: 0.5em;
-  margin: 1vw 1vw 0 1vw;
+  /* margin: 1vw 1vw 0 1vw; */
   &:hover {
     box-shadow: 0 0 50px 2.5px #fff;
   }
