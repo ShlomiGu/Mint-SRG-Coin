@@ -69,6 +69,7 @@ const ContentText = styled(Typography)({
   marginLeft: "30px",
   paddingTop: "30px",
   fontSize: "1.2rem",
+  whiteSpace: 'break-spaces',
 
   ["@media (max-width:768px)"]: {
     fontSize: "0.6rem",
