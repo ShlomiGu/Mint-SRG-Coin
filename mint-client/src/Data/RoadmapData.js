@@ -2,32 +2,38 @@ const data = [
     {
         date: 'May 2022',
         title: 'Pre-Sale',
-        description: '$9 Million'
+        content: `● 150,000,000 SRG TOKENS\n● Price: $0.06\n● Period: 1 Month`
     },
     {
         date: 'July 2022',
         title: 'Binanace Launchpad',
-        description: 'IEO – An early sale of $30-35 million and becoming a tradable coin on the crypto/ exchange.'
+        content: '● IEO – An early sale and get listing tradable coin on the crypto exchange'
     },
     {
         date: 'August 2022',
-        title: 'NFT Marketplace Launch'
+        title: 'NFT Marketplace',
+        content: "● Creating a collection Without a single line of code\n" +
+                "● Production of colletions in collaboration with talents\n" +
+                "● Trades only with SRG Token\n" +
+                "● Unique categories",
     },
     {
         date: 'September 2022',
         title: 'Private NFT Collection',
-        description: '$5 million estimated profit'
+        // description: '$5 million estimated profit',
+        content: "● Based on Game Theory rules combined with Play2Earn\n" +
+                 "● Competition with huge prizes\n" +
+                 "● Committed community"
     },
     {
         date: 'October 2022',
         title: 'Main talnet NFT Collection',
-        description: '$200 - $350 million estimated profit'
+        content: '● $200 - $350 million estimated profit'
     },
     {
         date: 'March 2023',
         title: 'ROUND A fundraising for METAVERSE',
-        description: '$300 million fund raising',
-        content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue nisi ac ante fringilla, eget dictum sapien sollicitudin. Phasellus augue ante, fermentum in erat a, egestas faucibus arcu"
+        content: '● $300 million fund raising',
     },
 ]
 

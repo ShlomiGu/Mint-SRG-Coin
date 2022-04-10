@@ -32,6 +32,7 @@ const TitleBox = styled(Typography)({
 
   ["@media (max-width:768px)"]: {
     fontSize: "0.75rem",
+    marginLeft: "20px",
   },
 });
 
@@ -39,6 +40,9 @@ const SubTitleBox = styled("div")({
   fontSize: "0.5rem",
   marginLeft: "30px",
 
+  ["@media (max-width:768px)"]: {
+    marginLeft: "20px",
+  },
 });
 
 const OpenButtonBox = styled("div")({
@@ -69,9 +73,11 @@ const ContentText = styled(Typography)({
   marginLeft: "30px",
   paddingTop: "30px",
   fontSize: "1.2rem",
+  whiteSpace: 'break-spaces',
 
   ["@media (max-width:768px)"]: {
     fontSize: "0.6rem",
+    marginLeft: "20px",
   },
 });
 

@@ -56,6 +56,14 @@ const CubeImg2 = styled('img')({
   },
 })
 
+const FinishContainer = styled("div")({
+  height: '200px',
+
+  ["@media (max-width:768px)"]: {
+    height: '30px',
+  },
+})
+
 const RoadmapContainer = () => {
   return (
     <Screen>
@@ -69,7 +77,7 @@ const RoadmapContainer = () => {
       <ContentContainer>
         <Roadmap />
       </ContentContainer>
-      <div style={{ height: "200px" }} />
+      <FinishContainer />
     </Screen>
   );
 };
