@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { styled, Grid, Button, Typography } from "@mui/material";
 import Carousel from "./Carousel";
 import PopupMint from "../Popup";
+import MintDialog from "../Dialog";
 
 const HeroContainer = styled("div")({
   width: "86vw",
@@ -118,9 +119,9 @@ const CubeImg2 = styled('img')((props) => ({
 const HeroSection = () => {
 
   // controls if popup displays
-  const [popUp, setPopUp] = useState(false)
+  const [dialog, setDialog] = useState(false)
   // adds class to darken background color
-  const duringPopUp = popUp ? " during-popup" : ""
+  const duringPopUp = dialog ? " during-popup" : ""
 
   return (
     <>
@@ -140,10 +141,10 @@ const HeroSection = () => {
         </span>
         <GoldBarImgae src="assets/goldbar.png" alt="goldbar" />
       </TitleText>
-      <BuyButton onClick={()=>setPopUp(true)}>{"Transfer/Buy"}</BuyButton>
+      <BuyButton onClick={()=>setDialog(true)}>{"Transfer/Buy"}</BuyButton>
       <Carousel/>
     </HeroContainer>
-    {popUp && <PopupMint setPopUp={setPopUp}/>}
+    {dialog && <MintDialog setDialog={setDialog}/>}
       </>
   );
 };
