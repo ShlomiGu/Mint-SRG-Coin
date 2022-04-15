@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { styled, Grid, Button, Typography } from "@mui/material";
 import Carousel from "./Carousel";
+import PopupMint from "../Popup";
+import MintDialog from "../Dialog";
 
 const HeroContainer = styled("div")({
   width: "86vw",
@@ -115,6 +117,12 @@ const CubeImg2 = styled('img')((props) => ({
 }))
 
 const HeroSection = () => {
+
+  // controls if popup displays
+  const [dialog, setDialog] = useState(false)
+  // adds class to darken background color
+  const duringPopUp = dialog ? " during-popup" : ""
+
   return (
     <>
     <HeroContainer
@@ -133,44 +141,10 @@ const HeroSection = () => {
         </span>
         <GoldBarImgae src="assets/goldbar.png" alt="goldbar" />
       </TitleText>
-      <BuyButton>{"Transfer/Buy"}</BuyButton>
+      <BuyButton onClick={()=>setDialog(true)}>{"Transfer/Buy"}</BuyButton>
       <Carousel/>
     </HeroContainer>
-
-    
-    {/* <HeroContainer
-      style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")', backgroundSize:'cover', backgroundRepeat: 'no-repeat' }}
-    >
-      <Grid item container xs={12}>
-      <SunImg src="assets/Main.svg" alt="sun" />
-        <Grid item xs={8}>
-          <img src={"assets/logo.png"} alt="logo" />
-        </Grid>
-        <Grid item xs={4}>
-          <img className="Cube-1" src={"/assets/Cube1.png"} alt="cube1" />
-        </Grid>
-      </Grid>
-      <TitleText>
-        <span>
-          From the dawn of history mankind has given value to coins through a
-          backup reserve. The oldest and most reliable being
-        </span>
-        <GoldBarImgae src="assets/goldbar.png" alt="goldbar" />
-      </TitleText>
-      <Grid item container xs={12}>
-        <Grid item xs={10}>
-          <BuyButton>{"Transfer/Buy"}</BuyButton>
-        </Grid>
-        <Grid item xs={2}>
-          <img className="Cube-2" src={"/assets/Cube2.png"} alt="cube2" />
-        </Grid>
-      </Grid>
-      <div>
-        <Grid item container justifyContent={'flex-end'}>
-          <Carousel/>
-        </Grid>
-      </div>
-    </HeroContainer> */}
+    {dialog && <MintDialog setDialog={setDialog}/>}
       </>
   );
 };
