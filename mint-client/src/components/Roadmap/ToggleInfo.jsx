@@ -3,19 +3,23 @@ import React from "react";
 
 const ToggleContainer = styled('div')((props) => ({
   borderRadius: '15px',
+  cursor: 'pointer',
   boxShadow: props.isOpen ? "0 1px 10px 1px #FFCC00" : 0,
   transition: "box-shadow 1s ease",
   marginTop: '-30px'
 }))
 
 const StyledBox = styled("div")((props) => ({
-  width: "40vw",
+  width: "30vw",
   height: "100px",
   borderRadius: props.isOpen ? "15px 15px 0 0" : "15px",
   backgroundColor: "#19181B",
   color: "#F1F1F1",
   display: "flex",
   marginBottom: props.isOpen ? "-15px" : 0,
+  ['@media (max-width:768px)']: {
+    width: "40vw",
+  },
 }));
 
 const TextBox = styled(Grid)({
@@ -48,6 +52,7 @@ const SubTitleBox = styled("div")({
 const OpenButtonBox = styled("div")({
   width: "40px",
   marginLeft: "10px",
+  marginRight: '20px',
   display: "flex",
   alignContent: "center",
   cursor: "pointer",
@@ -60,12 +65,12 @@ const OpenButton = styled("img")({
 
 const ContentBox = styled(Grid)({
   minHeight: "200px",
-  width: "40vw",
+  width: "30vw",
   backgroundColor: "#1F1E21",
   borderRadius: "0 0 15px 15px",
-  // ['@media (max-width:768px)']: {
-  //   width: "90vw",
-  // },
+  ['@media (max-width:768px)']: {
+    width: "40vw",
+  },
 });
 
 const ContentText = styled(Typography)({
@@ -89,13 +94,13 @@ const ToggleInfo = ({ title, subTitle, content, id, openKey, setOpenKey }) => {
   };
 
   return (
-      <ToggleContainer isOpen={isOpen}>
+      <ToggleContainer isOpen={isOpen} onClick={handleToggleButtonClicked}>
         <StyledBox isOpen={isOpen}>
           <TextBox>
             <TitleBox>{title}</TitleBox>
             <SubTitleBox>{subTitle}</SubTitleBox>
           </TextBox>
-          <OpenButtonBox onClick={handleToggleButtonClicked}>
+          <OpenButtonBox>
             <Fade in={!isOpen}>
               <OpenButton src={"/assets/YellowPlus.svg"} />
             </Fade>
