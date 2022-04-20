@@ -17,6 +17,7 @@ const AboutUsContainer = styled.div`
 const WrapText = styled.div`
     width: 65%;
     min-width: 50vw;
+    z-index: 0;
     @media screen and (max-width:780px) {
         padding: 0 0;
         width: 93%;

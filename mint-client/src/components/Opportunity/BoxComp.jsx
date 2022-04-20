@@ -3,7 +3,7 @@ import { styled } from "@mui/material"
 import styledComponent from "styled-components";
 
 const Screen = styledComponent.div`
-    width: 80%;
+    width: 65%;
     align-items: right;
     margin-left: ${({isLeft}) => (isLeft ? '' : 'auto')};
     margin-bottom: 2em;
@@ -32,10 +32,10 @@ const TextBox = styled('div')({
     background: '#060707 0% 0% no-repeat padding-box',
     border: '2px solid #F1F1F1',
     borderRadius: '15px',
-    opacity: 0.7,
-    // zIndex: -1,
+    opacity: 0.9,
+    // zIndex: 2,
     ['&:hover']: {
-        opacity: 1,
+        opacity: 0.9,
         boxShadow: '2px 2px 15px #FFCC00',
     },
 })
@@ -56,7 +56,7 @@ const TitleText = styled('div')({
     opacity: 1,
     margin: '0',
     ['@media (max-width:780px)']: {
-        font: 'normal normal 600 20px/61px Poppins',
+        font: 'normal normal 600 22px/61px Poppins',
     },
 })
 
@@ -69,7 +69,7 @@ const ContentText = styled('p')({
     opacity: 1,
     margin: '0',
     ['@media (max-width:780px)']: {
-        font: 'normal normal normal 16px/29px Poppins',
+        font: 'normal normal normal 14px/29px Poppins',
     },
 })
 

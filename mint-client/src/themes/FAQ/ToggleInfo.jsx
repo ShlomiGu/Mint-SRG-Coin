@@ -9,7 +9,7 @@ const StyledBox = styled("div")((props) => ({
   color: "#F1F1F1",
   display: "flex",
   transition: "border-radius 1s ease",
-  marginBottom: !props.isOpen ? '1vh' : 0,
+  marginBottom: !props.isOpen ? '2vh' : 0,
 
   ['@media (max-width:768px)']: {
     width: "90vw",
@@ -88,12 +88,12 @@ const ToggleInfo = ({ title, subTitle, content, id, openKey, setOpenKey }) => {
 
   return (
     <>
-      <StyledBox isOpen={isOpen}>
+      <StyledBox isOpen={isOpen}  onClick={handleToggleButtonClicked}>
         <TextBox>
           <TitleBox>{title}</TitleBox>
           <SubTitleBox>{subTitle}</SubTitleBox>
         </TextBox>
-        <OpenButtonBox onClick={handleToggleButtonClicked}>
+        <OpenButtonBox>
           <Fade in={!isOpen}>
             <OpenButton src={"/assets/YellowPlus.svg"} />
           </Fade>

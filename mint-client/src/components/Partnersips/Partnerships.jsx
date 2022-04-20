@@ -19,9 +19,10 @@ const PartnersBigDiv = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 80%;
-  margin: auto;
   justify-content: center;
   margin-bottom: 3vh;
+  margin: 50px 0 60px 0;
+  margin: auto;
 
   @media screen and (max-width: 768px) {
       display: none;
@@ -41,6 +42,8 @@ export const SponsorsPerson = styled.img`
   background-color: transparent !important;
   width: 10em;
   border-radius: 0.5em;
+  margin-right: 50px;
+  margin-bottom: 50px;
   /* margin: 1vw 1vw 0 1vw; */
   &:hover {
     box-shadow: 0 0 50px 2.5px #fff;
@@ -57,6 +60,8 @@ const TitleText = styled('h1')({
     textAlign: "center",
     color: "#F1F1F1",
     zIndex: 2,
+    marginTop: "60px",
+    marginBottom: "50px",
 
     ['@media (max-width:768px)']: {
         font: 'normal normal bold 26px/45px Poppins',

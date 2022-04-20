@@ -27,18 +27,18 @@ const NumberText = styled.h1`
 const Description = styled.p`
   font-family: 'Poppins';
   color: var(--unnamed-color-f1f1f1);
-  font: normal normal normal 28px/44px Poppins;
+  font: normal normal normal 30px/1.3 Poppins;
   text-align: left;
   letter-spacing: 0px;
   opacity: 1;
   margin: 0;
 
-  @media screen and (max-width: 1441px) {
-    font: normal normal normal 24px/40px Poppins;;
+  @media screen and (max-width: 2048px) {
+    font: normal normal normal 25px/1.3 Poppins;;
   };
 
   @media screen and (max-width: 768px) {
-    font: normal normal normal 13px/22px Poppins;;
+    font: normal normal normal 13px/1.3 Poppins;
   };
 `;
 
