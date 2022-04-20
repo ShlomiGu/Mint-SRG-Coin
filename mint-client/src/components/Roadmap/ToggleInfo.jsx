@@ -64,7 +64,7 @@ const OpenButton = styled("img")({
 });
 
 const ContentBox = styled(Grid)({
-  minHeight: "200px",
+  // minHeight: "200px",
   width: "30vw",
   backgroundColor: "#1F1E21",
   borderRadius: "0 0 15px 15px",
@@ -76,7 +76,7 @@ const ContentBox = styled(Grid)({
 const ContentText = styled(Typography)({
   color: "#F1F1F1",
   marginLeft: "30px",
-  paddingTop: "30px",
+  padding: "30px 0",
   fontSize: "1.2rem",
   whiteSpace: 'break-spaces',
 

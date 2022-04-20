@@ -21,7 +21,7 @@ const TitleText = styled('h1')({
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
-    marginBottom: "24vh",
+    marginBottom: "12vh",
     marginTop: "-15vh",
     color: "#F1F1F1",
     zIndex: 2,
@@ -101,19 +101,19 @@ const EcosystemSection = () => {
                             )})}
                 </BoxSmallContainer>
                     {/* NFT Marketplace */}
-                    <BoxEcosystem title={items[0].title} width='100%' margin_top='50%' margin_left='41%' isMobile={false}/>
+                    <BoxEcosystem title={items[0].title} width='100%' margin_top='42%' margin_left='41%' isMobile={false}/>
 
                     {/* Crypto Token */}
-                    <BoxEcosystem title={items[1].title} width='70%' margin_top='18%' margin_left='63%' isMobile={false}/>
+                    <BoxEcosystem title={items[1].title} width='70%' margin_top='12%' margin_left='63%' isMobile={false}/>
                     
                     {/* Unique Reserve */}
-                    <BoxEcosystem title={items[2].title} width='70%' margin_top='5%' isMobile={false}/>
+                    <BoxEcosystem title={items[2].title} width='70%' margin_top='-1%' isMobile={false}/>
 
                     {/* NFT Series For Talents */}
-                    <BoxEcosystem title={items[3].title} width='100%' margin_top='21%' margin_right='59%' isMobile={false}/>
+                    <BoxEcosystem title={items[3].title} width='100%' margin_top='13%' margin_right='55%' isMobile={false}/>
 
                     {/* Theorey Rules */}
-                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='52%' margin_right='40%' isMobile={false}/>
+                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='44%' margin_right='40%' isMobile={false}/>
             </EcosystemContainer>
         </>
     );

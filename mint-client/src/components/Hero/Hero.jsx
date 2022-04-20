@@ -24,9 +24,8 @@ const BuyButton = styled(Button)({
   border: "2px solid #FFCC00",
   borderRadius: "8px",
   boxShadow: "2px 2px 20px #FFCC00",
-  fontSize: "1.5rem",
+  font: "normal normal normal 700 1.5rem/7px Poppins",
   marginTop: "20px",
-  fontWeight: "bold",
   textTransform: "none",
   color: "black",
   "&:hover": {
@@ -86,6 +85,7 @@ const SunImg = styled('img')({
   height: '110vmin',
   top: "0",
   right: "0",
+  zIndex: 0,
   ['@media (max-width:769px)']: {
     height: '80vmin',
   },

@@ -83,7 +83,7 @@ const TitleText = styledComp.div`
 
 const ContentText = styledComp.p`
     color: var(--unnamed-color-f1f1f1);
-    font: normal normal normal 16px/36px Poppins;
+    font: normal normal normal 14px/36px Poppins;
     letter-spacing: 0px;
     color: #F1F1F1;
     opacity: 1;
