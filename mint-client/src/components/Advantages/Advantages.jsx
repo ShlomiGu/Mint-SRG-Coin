@@ -68,11 +68,12 @@ const TitleText = styled('h1')({
     color: 'var(--unnamed-color-f1f1f1)',
     textAlign: 'left',
     font: 'normal normal bold 55px/88px Poppins',
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+    // fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
     letterSpacing: '0px',
     color: '#F1F1F1',
     opacity: '1',
     marginTop: '0',
+    marginBottom: '50px',
 
     ['@media (max-width: 425px)']: {
         fontSize: '1.7em'

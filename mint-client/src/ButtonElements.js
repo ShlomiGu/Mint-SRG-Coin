@@ -24,7 +24,7 @@ export const Button = styled(Link)`
 
 export const WalletButton = styled(Link)`
   color: #ffffff !important;
-  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important;
+  /* font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important; */
   font-weight: 800 !important;
   text-transform: uppercase !important;
   background-image: linear-gradient(180deg, #ef4e11 0%, #dd1d0f 100%);
