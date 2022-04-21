@@ -21,6 +21,11 @@ const Title = styled("div")({
   marginTop: "11vw",
   marginBottom: "5vh",
   color: "#F1F1F1",
+
+  ['@media (max-width:768px)']: {
+    font: 'normal normal bold 2.2rem/45px Poppins',
+    // margin: '0.67em 0 0.67em 0',
+},
 });
 
 const TitleUnderLine = styled("div")({
@@ -29,6 +34,7 @@ const TitleUnderLine = styled("div")({
   width: "50px",
   alignSelf: "center",
   marginTop: "15px",
+  backgroundColor: "#FFCC00",
 });
 
 const RightsResevedSection = styled(Grid)({

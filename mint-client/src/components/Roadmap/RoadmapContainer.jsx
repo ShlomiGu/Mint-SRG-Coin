@@ -21,6 +21,11 @@ const Title = styled("div")({
   textAlign: "center",
   color: "#F1F1F1",
   zIndex: 10,
+
+  ['@media (max-width:768px)']: {
+    font: 'normal normal bold 2.2rem/45px Poppins',
+    marginTop: '50px',
+},
 });
 
 const TitleUnderLine = styled("div")({

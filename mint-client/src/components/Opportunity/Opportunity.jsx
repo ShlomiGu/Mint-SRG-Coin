@@ -65,7 +65,7 @@ const CubeImg = styled('img')({
     top: '250vh',
     ['@media (max-width:780px)']: {
         left: '60vw',
-        top: '250vh',
+        top: '310vh',
     },
 })
 

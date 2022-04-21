@@ -31,7 +31,7 @@ const TitleText = styled.h1`
     display: flex;
     flex-direction: column;
     font: normal normal bold 65px/88px Poppins;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
     letter-spacing: 0px;
     color: #F1F1F1;
     opacity: 1,

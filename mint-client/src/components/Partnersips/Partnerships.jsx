@@ -42,16 +42,15 @@ export const SponsorsPerson = styled.img`
   background-color: transparent !important;
   width: 10em;
   border-radius: 0.5em;
-  margin-right: 50px;
-  margin-bottom: 50px;
-  /* margin: 1vw 1vw 0 1vw; */
-  &:hover {
+  margin: 0 25px 50px 25px;
+
+  /* &:hover {
     box-shadow: 0 0 50px 2.5px #fff;
-  }
+  } */
 `;
 
 const TitleText = styled('h1')({
-    fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
+    // fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
 
     fontSize: "3rem",
     fontWeight: "bold",
@@ -64,7 +63,7 @@ const TitleText = styled('h1')({
     marginBottom: "50px",
 
     ['@media (max-width:768px)']: {
-        font: 'normal normal bold 26px/45px Poppins',
+        font: 'normal normal bold 1.5rem/45px Poppins',
         margin: '0.67em 0 0.67em 0',
     },
 })
@@ -86,7 +85,7 @@ const PartnershipsSection = () => {
             <TitleUnderLine />
         </TitleText>
         <PartnersBigDiv>
-            {PartnersImages.map((info, index) => {          
+            {PartnersImages.map((info) => {          
                 return(
                     <SponsorsPerson
                         src={info.image}

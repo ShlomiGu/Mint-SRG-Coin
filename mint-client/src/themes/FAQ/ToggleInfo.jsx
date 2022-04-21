@@ -10,6 +10,7 @@ const StyledBox = styled("div")((props) => ({
   display: "flex",
   transition: "border-radius 1s ease",
   marginBottom: !props.isOpen ? '2vh' : 0,
+  cursor: 'pointer',
 
   ['@media (max-width:768px)']: {
     width: "90vw",
@@ -57,11 +58,13 @@ const OpenButton = styled("img")({
 });
 
 const ContentBox = styled(Grid)({
-  minHeight: "200px",
+  // minHeight: "200px",
   width: "50vw",
+  padding: "30px 0 30px 0",
   backgroundColor: "#1F1E21",
   borderRadius: "0 0 15px 15px",
   marginBottom: '1vh',
+  cursor: 'pointer',
 
   ['@media (max-width:768px)']: {
     width: "90vw",
@@ -71,7 +74,7 @@ const ContentBox = styled(Grid)({
 const ContentText = styled(Typography)({
   color: '#F1F1F1',
   marginLeft: '30px',
-  paddingTop: '30px',
+  marginRight: '30px',
   fontSize: '1.2rem',
 
   ['@media (max-width:768px)']: {
@@ -101,7 +104,7 @@ const ToggleInfo = ({ title, subTitle, content, id, openKey, setOpenKey }) => {
         </OpenButtonBox>
       </StyledBox>
 
-      <Collapse in={isOpen}>
+      <Collapse in={isOpen} onClick={handleToggleButtonClicked}>
         <ContentBox>
           <ContentText>
             {content}

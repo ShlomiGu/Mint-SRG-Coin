@@ -37,13 +37,13 @@ const Screen = styled('div')((props) => ({
     ['&:hover']: {
         cursor: 'pointer',
         opacity: 1,
-        font: 'normal normal 600 27px/40px Poppins',
+        // font: 'normal normal 600 27px/40px Poppins',
         ['@media (max-width:1410px)']: {
-            font: 'normal normal 600 23px/40px Poppins',
+            // font: 'normal normal 600 23px/40px Poppins',
         },
         ['@media (max-width:769px)']: {
-            width: '100%',
-            font: 'normal normal 600 20px/29px Poppins',
+            width: '96%',
+            // font: 'normal normal 600 20px/29px Poppins',
         },
     },
 }))

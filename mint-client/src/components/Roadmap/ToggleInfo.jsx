@@ -1,4 +1,5 @@
 import { Collapse, Fade, Grid, styled, Typography } from "@mui/material";
+import { zIndex } from "material-ui/styles";
 import React from "react";
 
 const ToggleContainer = styled('div')((props) => ({
@@ -6,7 +7,8 @@ const ToggleContainer = styled('div')((props) => ({
   cursor: 'pointer',
   boxShadow: props.isOpen ? "0 1px 10px 1px #FFCC00" : 0,
   transition: "box-shadow 1s ease",
-  marginTop: '-30px'
+  marginTop: '-30px',
+  zIndex: 1,
 }))
 
 const StyledBox = styled("div")((props) => ({
