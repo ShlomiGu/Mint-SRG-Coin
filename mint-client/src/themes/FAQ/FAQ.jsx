@@ -23,7 +23,7 @@ const Title = styled("div")({
   color: "#F1F1F1",
 
   ['@media (max-width:768px)']: {
-    font: 'normal normal bold 2.2rem/45px Poppins',
+    font: 'normal normal bold 1.7rem/45px Poppins',
     // margin: '0.67em 0 0.67em 0',
 },
 });
@@ -57,7 +57,7 @@ const SeperationLine = styled("div")({
 });
 
 const ContentContainer = styled(Grid)({
-  minHeight: "52vh",
+  minHeight: "50vh",
 });
 
 const FAQ = () => {

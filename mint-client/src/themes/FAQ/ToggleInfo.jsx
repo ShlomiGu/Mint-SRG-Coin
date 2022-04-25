@@ -32,6 +32,7 @@ const TitleBox = styled(Typography)({
   fontSize: "1.5rem",
   fontWeight: "bold",
   marginLeft: "30px",
+  fontFamily: "Poppins",
 
   ['@media (max-width:768px)']: {
     fontSize: "1.3rem",
@@ -76,6 +77,7 @@ const ContentText = styled(Typography)({
   marginLeft: '30px',
   marginRight: '30px',
   fontSize: '1.2rem',
+  fontFamily: "Poppins",
 
   ['@media (max-width:768px)']: {
     fontSize: '1rem',
@@ -104,7 +106,7 @@ const ToggleInfo = ({ title, subTitle, content, id, openKey, setOpenKey }) => {
         </OpenButtonBox>
       </StyledBox>
 
-      <Collapse in={isOpen} onClick={handleToggleButtonClicked}>
+      <Collapse in={isOpen} onClick={handleToggleButtonClicked} style={{marginBottom: "2vh"}}>
         <ContentBox>
           <ContentText>
             {content}

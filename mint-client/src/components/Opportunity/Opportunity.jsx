@@ -37,7 +37,7 @@ const TitleText = styled('h1')({
     color: "#F1F1F1",
 
     ['@media (max-width:768px)']: {
-        font: 'normal normal bold 26px/45px Poppins',
+        font: 'normal normal bold 1.7rem/45px Poppins',
         marginLeft: '5%',
         marginTop: "7vh",
     },

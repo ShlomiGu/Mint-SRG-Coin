@@ -30,7 +30,7 @@ const TitleText = styled('h1')({
         margin: '0.67em 0 0.67em 0',
     },
     ['@media (max-width:425px)']: {
-        font: 'normal normal bold 1.8rem/45px Poppins',
+        font: 'normal normal bold 1.7rem/45px Poppins',
     },
 })
 
