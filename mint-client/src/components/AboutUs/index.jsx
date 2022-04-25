@@ -30,15 +30,15 @@ const TitleText = styled.h1`
     text-align: center;
     display: flex;
     flex-direction: column;
-    font: normal normal bold 65px/88px Poppins;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; */
+    font: normal normal bold 3rem/60px Poppins;
     letter-spacing: 0px;
     color: #F1F1F1;
     opacity: 1,
     margin-top: 0;
+    margin-bottom: 5vh;
 
     @media screen and (max-width: 425px) {
-        font: normal normal bold 38px/45px Poppins;
+        font: normal normal bold 2.2rem/45px Poppins;
         margin: 0.67em 0 0.67em 0;
     };
 `
@@ -55,7 +55,7 @@ const TitleUnderLine = styled.div`
 const Content1 = styled.div`
     color: var(--unnamed-color-f1f1f1);
     text-align: center;
-    font: normal normal normal 32px/43px Poppins;
+    font: normal normal normal 26px/43px Poppins;
     letter-spacing: 0px;
     color: #F1F1F1;
     opacity: 1;

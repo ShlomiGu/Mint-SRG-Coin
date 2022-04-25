@@ -74,6 +74,7 @@ const TitleText = styled('h1')({
     opacity: '1',
     marginTop: '0',
     marginBottom: '50px',
+    fontSize: "3rem",
 
     ['@media (max-width: 425px)']: {
         fontSize: '1.7em'
