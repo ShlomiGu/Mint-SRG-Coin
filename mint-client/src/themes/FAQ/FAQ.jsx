@@ -5,11 +5,16 @@ import data from "./data.json";
 
 const Screen = styled("div")({
   width: "100vw",
-  minHeight: "100vh",
+  // minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   backgroundImage: "url(assets/DesktopSkyBackground.png)",
+
+  ['@media (max-width:425px)']: {
+      paddingTop: '50px',
+  }
+
 });
 
 const Title = styled("div")({

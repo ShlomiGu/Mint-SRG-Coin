@@ -35,6 +35,7 @@ const BuyButton = styled(Button)({
     font: "normal normal 600 14px/7px Poppins",
     width: "37vw",
     height: '50px',
+    marginBottom: '15px',
   },  
 });
 

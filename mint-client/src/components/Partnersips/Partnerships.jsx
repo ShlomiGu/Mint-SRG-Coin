@@ -31,6 +31,7 @@ const PartnersBigDiv = styled.div`
 
 const PartnerSmallDiv = styled.div`
     width: 80%;
+    height: 23vh;
     margin: none;
     justify-content: center;
     @media screen and (min-width: 769px) {
