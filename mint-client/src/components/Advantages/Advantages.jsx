@@ -77,7 +77,8 @@ const TitleText = styled('h1')({
     fontSize: "3rem",
 
     ['@media (max-width: 425px)']: {
-        fontSize: '1.7em'
+        fontSize: '1.7em',
+        marginBottom: '25px',
     }
 })
 
@@ -87,7 +88,7 @@ const TitleUnderLine = styled('div')({
     backgroundColor: '#FFCC00',
     width: '50px',
     alignSelf: 'center',
-    marginTop: '15px'
+    // marginTop: '15px'
 })
 
 const WrapImg = styled('div')({

@@ -38,7 +38,7 @@ const Description = styled.p`
   };
 
   @media screen and (max-width: 768px) {
-    font: normal normal normal 13px/1.3 Poppins;
+    font: normal normal normal 14px/1.3 Poppins;
   };
 `;
 

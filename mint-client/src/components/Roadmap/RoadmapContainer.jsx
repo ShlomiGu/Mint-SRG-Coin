@@ -23,7 +23,7 @@ const Title = styled("div")({
   zIndex: 10,
 
   ['@media (max-width:768px)']: {
-    font: 'normal normal bold 2.2rem/45px Poppins',
+    font: 'normal normal bold 1.7rem/45px Poppins',
     marginTop: '50px',
 },
 });

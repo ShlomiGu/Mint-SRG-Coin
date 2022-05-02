@@ -9,6 +9,10 @@ const ToggleContainer = styled('div')((props) => ({
   transition: "box-shadow 1s ease",
   marginTop: '-30px',
   zIndex: 1,
+
+  ['@media (max-width:768px)']: {
+    marginTop: '-31px',
+  },
 }))
 
 const StyledBox = styled("div")((props) => ({
@@ -21,6 +25,8 @@ const StyledBox = styled("div")((props) => ({
   marginBottom: props.isOpen ? "-15px" : 0,
   ['@media (max-width:768px)']: {
     width: "40vw",
+    height: "80px",
+
   },
 }));
 
@@ -38,7 +44,7 @@ const TitleBox = styled(Typography)({
 
   ["@media (max-width:768px)"]: {
     fontSize: "0.75rem",
-    marginLeft: "20px",
+    marginLeft: "15px",
   },
 });
 
@@ -47,14 +53,14 @@ const SubTitleBox = styled("div")({
   marginLeft: "30px",
 
   ["@media (max-width:768px)"]: {
-    marginLeft: "20px",
+    marginLeft: "15px",
   },
 });
 
 const OpenButtonBox = styled("div")({
   width: "40px",
   marginLeft: "10px",
-  marginRight: '20px',
+  marginRight: '15px',
   display: "flex",
   alignContent: "center",
   cursor: "pointer",
@@ -63,6 +69,10 @@ const OpenButtonBox = styled("div")({
 const OpenButton = styled("img")({
   position: "absolute",
   alignSelf: "center",
+
+  ['@media (max-width:768px)']: {
+    width: "20px",
+  },
 });
 
 const ContentBox = styled(Grid)({
@@ -81,10 +91,13 @@ const ContentText = styled(Typography)({
   padding: "30px 0",
   fontSize: "1.2rem",
   whiteSpace: 'break-spaces',
+  lineHeight: '2.4rem',
 
   ["@media (max-width:768px)"]: {
     fontSize: "0.6rem",
-    marginLeft: "20px",
+    marginLeft: "15px",
+    padding: "20px 0",
+    lineHeight: '1.5rem',
   },
 });
 

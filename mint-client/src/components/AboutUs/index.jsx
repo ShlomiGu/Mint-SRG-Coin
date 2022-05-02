@@ -38,7 +38,7 @@ const TitleText = styled.h1`
     margin-bottom: 5vh;
 
     @media screen and (max-width: 425px) {
-        font: normal normal bold 2.2rem/45px Poppins;
+        font: normal normal bold 1.7rem/45px Poppins;
         margin: 0.67em 0 0.67em 0;
     };
 `
@@ -72,14 +72,14 @@ const Content1 = styled.div`
 const Title2 = styled.div`
     color: var(--unnamed-color-f1f1f1);
     text-align: center;
-    font: normal normal 600 43px/61px Poppins;
+    font: normal normal 600 36px/61px Poppins;
     letter-spacing: 0px;
     color: #F1F1F1;
     opacity: 1;
     margin-bottom: 8px;
 
     @media screen and (max-width:1440px) {
-        font: normal normal 600 34px/61px Poppins;
+        font: normal normal 600 30px/61px Poppins;
     }
     @media screen and (max-width:768px) {
         font: normal normal 600 28px/61px Poppins;
