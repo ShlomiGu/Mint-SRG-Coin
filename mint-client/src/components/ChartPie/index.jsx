@@ -20,6 +20,9 @@ const Screen = styled.div`
     @media screen and (max-width: 768px) {
       padding-bottom: 0;
     } 
+    @media screen and (max-width: 425px) {
+      min-height: 90vh;
+    } 
 `
 
 const Title = styled("div")({
@@ -35,7 +38,8 @@ const Title = styled("div")({
 
   ['@media (max-width:768px)']: {
     font: 'normal normal bold 1.7rem/45px Poppins',
-    paddingTop: '10vh',
+    paddingTop: '5vh',
+    marginBottom: '6vh',
   },
 });
 

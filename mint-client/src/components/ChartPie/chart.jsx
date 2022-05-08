@@ -13,8 +13,9 @@ class ApexChart extends React.Component {
           series: [70, 3.5, 14, 10, 10, 15, 5],
           labels: names,
           chart: {
+            // type: 'donut',
             width: 800,
-            type: 'donut',
+            height: 400,
           },
           style: {
             fontSize: '40px',
@@ -44,18 +45,25 @@ class ApexChart extends React.Component {
                   show: true,
                   value: {
                     show: true,
+                    fontFamily: 'Poppins',
                     formatter: function (val) {
                       return (parseInt(val)).toLocaleString()
                     }
                   },
                   name: {
                     show: true,
+                    fontFamily: 'Poppins',
                     formatter: function (val) {
+                      if(val === "Total"){
+                        return "Total Coins"
+                      }
                       return (val)
                     }
                   },
                   total: {
                     show: true,
+                    fontSize: '18px',
+                    color: '#373d3f',
                     formatter: function (w) {
                       return w.globals.seriesTotals.reduce((a, b) => {
                         return (a + b)
@@ -64,37 +72,97 @@ class ApexChart extends React.Component {
                   },
                   fontSize: "100px",
                   fontFamily: 'Poppins',
-                  text: "sh"
                 }
               }
             }
           },
           dataLabels: {
             enabled: true,
-            // enabledOnSeries: undefined,
+            style: {
+              fontSize: '18px',
+              fontFamily: 'Poppins',
+              fontWeight: 500,
+              colors: ["#060707"],
+            },
           },
           fill: {
             // type: 'gradient',
             type: 'donut',
           },
           legend: {
+            labels: {
+              colors: '#F1F1F1',
+            },
+            markers: {
+              width: 16,
+              height: 16,
+            },
+            itemMargin: {
+              horizontal: 5,
+              vertical: 10
+          },
+            fontFamily: 'Poppins',
+            fontSize: '24px',
+            offsetY: 80,
+            offsetX: -100,
             formatter: function(val, opts) {
               return '\t' + names[opts.seriesIndex]
-              // return val + " - " + opts.w.globals.series[opts.seriesIndex]
-            }
+            },
+            onItemClick: {
+              toggleDataSeries: false,
+            },
           },
-          title: {
-            // text: 'Gradient Donut with custom Start-angle'
+          tooltip: {
+            enabled: false,
           },
           responsive: [{
-            breakpoint: 350,
+            breakpoint: 425,
             options: {
               chart: {
-                width: 200
+                width: '200%',
+                height: 650,
+              },
+              plotOptions: {
+                pie: {
+                  startAngle: 0,
+                  endAngle: 360,
+                  expandOnClick: false,
+                  donut: {
+                    size: "60px",
+                    labels: {
+                      show: true,
+                      total: {
+                        show: true,
+                        fontSize: '10px',
+                      },
+                    },
+                  },
+                },
               },
               legend: {
-                position: 'bottom'
-              }
+                position: 'bottom',
+                markers: {
+                  width: 12,
+                  height: 12,
+                },
+                horizontalAlign: 'left',
+                fontSize: '16px',
+                offsetY: 0,
+                offsetX: 0,
+                itemMargin: {
+                  horizontal: 120,
+                  vertical: 8,
+                },
+              },
+              dataLabels: {
+                enabled: true,
+                style: {
+                  fontSize: '13px',
+                  fontFamily: 'Poppins',
+                  fontWeight: 500,
+                  colors: ["#060707"],
+                },
+              },
             }
           }]
         },
@@ -111,7 +179,7 @@ class ApexChart extends React.Component {
         
 
         <div id="chart">
-            <ReactApexChart options={this.state.options} series={this.state.series} labels={this.state.labels} type="donut" width={800} />
+            <ReactApexChart options={this.state.options} series={this.state.series} labels={this.state.labels} type="donut" width={1100} />
         </div>
       );
     }
