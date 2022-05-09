@@ -14,7 +14,7 @@ class ApexChart extends React.Component {
           labels: names,
           chart: {
             // type: 'donut',
-            width: 800,
+            width: 400,
             height: 400,
           },
           style: {
@@ -46,6 +46,9 @@ class ApexChart extends React.Component {
                   value: {
                     show: true,
                     fontFamily: 'Poppins',
+                    fontSize: '30px',
+
+                    color: '#F1F1F1',
                     formatter: function (val) {
                       return (parseInt(val)).toLocaleString()
                     }
@@ -53,6 +56,7 @@ class ApexChart extends React.Component {
                   name: {
                     show: true,
                     fontFamily: 'Poppins',
+                    // color: '#F1F1F1',
                     formatter: function (val) {
                       if(val === "Total"){
                         return "Total Coins"
@@ -62,8 +66,9 @@ class ApexChart extends React.Component {
                   },
                   total: {
                     show: true,
-                    fontSize: '18px',
-                    color: '#373d3f',
+                    fontSize: '22px',
+                    // color: '#373d3f',
+                    color: '#F1F1F1',
                     formatter: function (w) {
                       return w.globals.seriesTotals.reduce((a, b) => {
                         return (a + b)
@@ -90,6 +95,7 @@ class ApexChart extends React.Component {
             type: 'donut',
           },
           legend: {
+            show: false,
             labels: {
               colors: '#F1F1F1',
             },
@@ -119,8 +125,8 @@ class ApexChart extends React.Component {
             breakpoint: 425,
             options: {
               chart: {
-                width: '200%',
-                height: 650,
+                width: 450,
+                // height: 650,
               },
               plotOptions: {
                 pie: {
@@ -133,7 +139,10 @@ class ApexChart extends React.Component {
                       show: true,
                       total: {
                         show: true,
-                        fontSize: '10px',
+                        fontSize: '11px',
+                      },
+                      value: {
+                        fontSize: '18px',
                       },
                     },
                   },
@@ -179,7 +188,7 @@ class ApexChart extends React.Component {
         
 
         <div id="chart">
-            <ReactApexChart options={this.state.options} series={this.state.series} labels={this.state.labels} type="donut" width={1100} />
+            <ReactApexChart options={this.state.options} series={this.state.series} labels={this.state.labels} type="donut" width={850} />
         </div>
       );
     }

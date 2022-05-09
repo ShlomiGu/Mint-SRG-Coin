@@ -35,7 +35,7 @@ const TitleText = styled.h1`
     color: #F1F1F1;
     opacity: 1,
     margin-top: 0;
-    margin-bottom: 5vh;
+    margin-bottom: 2.5vh;
 
     @media screen and (max-width: 425px) {
         font: normal normal bold 1.7rem/45px Poppins;
@@ -55,6 +55,25 @@ const TitleUnderLine = styled.div`
 const Content1 = styled.div`
     color: var(--unnamed-color-f1f1f1);
     text-align: center;
+    font: normal normal bold 28px/43px Poppins;
+    letter-spacing: 0px;
+    color: #F1F1F1;
+    opacity: 1;
+    margin-bottom: 1vw;
+    white-space: break-spaces;
+
+    @media screen and (max-width:1440px) {
+        font: normal normal bold 26px/29px Poppins;
+    }
+    @media screen and (max-width:768px) {
+        font: normal normal bold 14px/29px Poppins;
+        margin-bottom: 5vw;
+    }
+`;
+
+const Content2 = styled.div`
+    color: var(--unnamed-color-f1f1f1);
+    text-align: center;
     font: normal normal normal 26px/43px Poppins;
     letter-spacing: 0px;
     color: #F1F1F1;
@@ -65,7 +84,7 @@ const Content1 = styled.div`
         font: normal normal normal 26px/29px Poppins;
     }
     @media screen and (max-width:768px) {
-        font: normal normal normal 18px/29px Poppins;
+        font: normal normal normal 12px/26px Poppins;
     }
 `;
 
@@ -87,20 +106,20 @@ const Title2 = styled.div`
     }
 `;
 
-const Content2 = styled.div`
+const Content3 = styled.div`
     color: var(--unnamed-color-f1f1f1);
     text-align: center;
     font: normal normal normal 26px/36px Poppins;
     letter-spacing: 0px;
     color: #F1F1F1;
     opacity: 1;
-    width: 85%;
     margin: auto;
     @media screen and (max-width:1440px) {
-        font: normal normal normal 24px/36px Poppins;
+        font: normal normal normal 18px/36px Poppins;
+        width: 85%;
     }
     @media screen and (max-width:768px) {
-        font: normal normal normal 16px/29px Poppins;
+        font: normal normal normal 12px/26px Poppins;
     }
 `;
 
@@ -114,14 +133,17 @@ const AboutUsSection = () => {
                 </TitleText>
                 <WrapText>
                     <Content1>
-                        { items.content }
+                        { items.content1 }
                     </Content1>
-                    <Title2>
-                        { items.Title2 }
-                    </Title2>
                     <Content2>
                         { items.content2 }
                     </Content2>
+                    <Title2>
+                        { items.Title2 }
+                    </Title2>
+                    <Content3>
+                        { items.content3 }
+                    </Content3>
                 </WrapText>
             </AboutUsContainer>
         </>
