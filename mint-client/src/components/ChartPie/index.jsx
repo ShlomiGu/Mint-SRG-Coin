@@ -14,14 +14,14 @@ const Screen = styled.div`
     background-image: url(assets/DesktopSkyBackground.png);
     background-repeat: revert;
     color: #D6D6D6;
-    padding-bottom: 25vh;
+    padding-bottom: 10vh;
     overflow: hidden;
 
     @media screen and (max-width: 768px) {
-      padding-bottom: 0;
+      padding-bottom: 5vh;
     } 
     @media screen and (max-width: 425px) {
-      min-height: 90vh;
+      min-height: 0;
     } 
 `
 
@@ -33,8 +33,8 @@ const Title = styled("div")({
   textAlign: "center",
   color: "#F1F1F1",
   zIndex: 10,
-  paddingTop: '20vh',
-  marginBottom: '12vh',
+  paddingTop: '12vh',
+  marginBottom: '6vh',
 
   ['@media (max-width:768px)']: {
     font: 'normal normal bold 1.7rem/45px Poppins',

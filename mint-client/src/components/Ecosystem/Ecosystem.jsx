@@ -45,12 +45,12 @@ const TitleUnderLine = styled('div')({
 
 const EcosystemImage = styled('img')({
     alignSelf: "center",
-    width: "36%",
+    width: "25%",
     marginBottom: "5vh",
     zIndex: 2,
 
     ['@media (min-width:769px)']: {
-        margin: '10vh 0 45vh 0'
+        margin: '13vh 0 45vh 0'
     },
     ['@media (max-width:768px)']: {
         width: "65%",
@@ -101,19 +101,19 @@ const EcosystemSection = () => {
                             )})}
                 </BoxSmallContainer>
                     {/* NFT Marketplace */}
-                    <BoxEcosystem title={items[0].title} width='100%' margin_top='42%' margin_left='41%' isMobile={false}/>
+                    <BoxEcosystem title={items[0].title} width='100%' margin_top='36%' margin_left='26.5%' isMobile={false}/>
 
                     {/* Crypto Token */}
-                    <BoxEcosystem title={items[1].title} width='70%' margin_top='12%' margin_left='63%' isMobile={false}/>
+                    <BoxEcosystem title={items[1].title} width='70%' margin_top='14.5%' margin_left='53%' isMobile={false}/>
                     
                     {/* Unique Reserve */}
-                    <BoxEcosystem title={items[2].title} width='70%' margin_top='-1%' isMobile={false}/>
+                    <BoxEcosystem title={items[2].title} width='70%' margin_top='0.4%' isMobile={false}/>
 
                     {/* NFT Series For Talents */}
-                    <BoxEcosystem title={items[3].title} width='100%' margin_top='13%' margin_right='55%' isMobile={false}/>
+                    <BoxEcosystem title={items[3].title} width='100%' margin_top='15.5%' margin_right='49%' isMobile={false}/>
 
                     {/* Theorey Rules */}
-                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='44%' margin_right='40%' isMobile={false}/>
+                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='36%' margin_right='44%' isMobile={false}/>
             </EcosystemContainer>
         </>
     );
