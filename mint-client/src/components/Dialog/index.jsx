@@ -168,9 +168,23 @@ const MintDialog = (props) => {
         maxWidth={maxWidth}
         open={open}
         onClose={setDialog}
+        PaperProps={{
+          style: {
+            backgroundColor: '#060707',
+            alignItems: 'center',
+            border: '2px solid #F1F1F1',
+            borderRadius: '15px',
+          },
+        }}
       >
-        <DialogTitle>{accounts[0]}</DialogTitle>
-        <DialogContent>
+        <DialogTitle>{accounts[0] || Welcome}</DialogTitle>
+        <DialogContent
+          PaperProps={{
+            style: {
+              backgroundColor: '#060707',
+              alignItems: 'center',
+            },
+          }}>
           <DialogContentText>
             You can set my maximum width and whether to adapt or not.
           </DialogContentText>
@@ -184,33 +198,6 @@ const MintDialog = (props) => {
               width: "fit-content",
             }}
           >
-            {/* <FormControl sx={{ mt: 2, minWidth: 120 }}>
-              <InputLabel htmlFor="max-width">maxWidth</InputLabel>
-              <Select
-                autoFocus
-                value={maxWidth}
-                onChange={handleMaxWidthChange}
-                label="maxWidth"
-                inputProps={{
-                  name: 'max-width',
-                  id: 'max-width',
-                }}
-              >
-                <MenuItem value={false}>false</MenuItem>
-                <MenuItem value="xs">xs</MenuItem>
-                <MenuItem value="sm">sm</MenuItem>
-                <MenuItem value="md">md</MenuItem>
-                <MenuItem value="lg">lg</MenuItem>
-                <MenuItem value="xl">xl</MenuItem>
-              </Select>
-            </FormControl>
-            <FormControlLabel
-              sx={{ mt: 1 }}
-              control={
-                <Switch checked={fullWidth} onChange={handleFullWidthChange} />
-              }
-              label="Full width"
-            /> */}
             {!accounts[0] && (
               <div>
                 <WalletButton
@@ -218,7 +205,11 @@ const MintDialog = (props) => {
                     isConnected ? disconnectWalletHandler : connectWalletHandler
                   }
                 >
-                  Connect
+                  Login with MetaMask
+                </WalletButton>
+                <br/>
+                <WalletButton>
+                  Login with Trust Wallet
                 </WalletButton>
               </div>
             )}

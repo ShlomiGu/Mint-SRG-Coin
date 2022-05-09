@@ -23,18 +23,22 @@ export const Button = styled(Link)`
 `;
 
 export const WalletButton = styled(Link)`
-  color: #ffffff !important;
-  /* font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important; */
-  font-weight: 800 !important;
-  text-transform: uppercase !important;
-  background-image: linear-gradient(180deg, #ef4e11 0%, #dd1d0f 100%);
+  color: #F1F1F1 !important;
+  font: normal normal normal 18px/7px Poppins;
   display: inline-block;
   padding: 0.3em 1em;
-  line-height: 1.7em !important;
-  border-radius: 50px;
+  line-height: 2.1em !important;
+  border-radius: 8px;
   transition: all 0.2s ease-in-out;
+  border: 2px solid var(--unnamed-color-ffcc00);
   cursor: pointer;
+
+  width: 100%;
+  text-align: center;
+  margin-bottom: 22px;
+
   &:hover {
-    font-size: 18px;
+    background: #060707 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #FFCC0073;
   }
 `;
