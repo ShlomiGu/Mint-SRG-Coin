@@ -125,7 +125,7 @@ class ApexChart extends React.Component {
             breakpoint: 425,
             options: {
               chart: {
-                width: 450,
+                width: 400,
                 // height: 650,
               },
               plotOptions: {
@@ -166,7 +166,7 @@ class ApexChart extends React.Component {
               dataLabels: {
                 enabled: true,
                 style: {
-                  fontSize: '13px',
+                  fontSize: '12px',
                   fontFamily: 'Poppins',
                   fontWeight: 500,
                   colors: ["#060707"],
@@ -188,7 +188,7 @@ class ApexChart extends React.Component {
         
 
         <div id="chart">
-            <ReactApexChart options={this.state.options} series={this.state.series} labels={this.state.labels} type="donut" width={850} />
+            <ReactApexChart options={this.state.options} series={this.state.series} labels={this.state.labels} type="donut" width={750} />
         </div>
       );
     }
