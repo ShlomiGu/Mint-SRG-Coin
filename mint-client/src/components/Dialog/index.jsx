@@ -177,7 +177,7 @@ const MintDialog = (props) => {
           },
         }}
       >
-        <DialogTitle>{accounts[0] || Welcome}</DialogTitle>
+        <DialogTitle>{accounts[0]}</DialogTitle>
         <DialogContent
           PaperProps={{
             style: {
