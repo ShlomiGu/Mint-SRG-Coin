@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { styled, Grid, Button, Typography } from "@mui/material";
 import Carousel from "./Carousel";
 import PopupMint from "../Popup";
 import MintDialog from "../Dialog";
+import Aos from "aos";
 
 const HeroContainer = styled("div")({
   width: "86vw",
@@ -71,10 +72,6 @@ const WrapLogo = styled("div")({
   
 });
 
-const WrapButton = styled("div")({
-  
-});
-
 const LogoImage = styled("img")({
   ['@media (max-width:780px)']: {
     height: '20vmin',
@@ -118,7 +115,9 @@ const CubeImg2 = styled('img')((props) => ({
 }))
 
 const HeroSection = () => {
-
+  useEffect(() => {
+    Aos.init({ duration: 2000, delay: "300" });
+  }, []);
   // controls if popup displays
   const [dialog, setDialog] = useState(false)
   // adds class to darken background color
@@ -132,18 +131,18 @@ const HeroSection = () => {
       <SunImg src="assets/Main.svg" alt="sun" />
       <CubeImg1 className="Cube-1" src={"/assets/Cube1.png"} alt="cube1" />
       <CubeImg2 className="Cube-2" src={"/assets/Cube2.png"} alt="cube2" />
-      <WrapLogo>
+      <WrapLogo data-aos="fade-down">
         <LogoImage src={"assets/logo.png"} alt="logo" />
       </WrapLogo>
-      <TitleText>
+      <TitleText data-aos="fade-right" data-aos-delay="1000">
         <span>
           From the dawn of history mankind has given value to coins through a
           backup reserve.<br/> The oldest and most reliable being
         </span>
-        <GoldBarImgae src="assets/goldbar.png" alt="goldbar" />
+        <GoldBarImgae src="assets/goldbar.png" alt="goldbar" data-aos="zoom-in" data-aos-delay="2500"/>
       </TitleText>
-      <BuyButton>{"Transfer/Buy"}</BuyButton>
-      <Carousel/>
+      <BuyButton data-aos="fade-right" data-aos-delay="3000">{"Transfer/Buy"}</BuyButton>
+      <Carousel />
     </HeroContainer>
     {dialog && <MintDialog setDialog={setDialog}/>}
       </>
