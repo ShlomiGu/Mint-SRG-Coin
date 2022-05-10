@@ -60,7 +60,9 @@ const ChartPieSection = () => {
         SRG Token Allocation
         <TitleUnderLine />
       </Title>
+      <div style={{zIndex: 1}}>
         <ApexChart />
+      </div>
         {/* <Chart3D /> */}
     </Screen>
   )

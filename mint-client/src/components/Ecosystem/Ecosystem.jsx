@@ -101,7 +101,7 @@ const EcosystemSection = () => {
                             )})}
                 </BoxSmallContainer>
                     {/* NFT Marketplace */}
-                    <BoxEcosystem title={items[0].title} width='100%' margin_top='36%' margin_left='26.5%' isMobile={false}/>
+                    <BoxEcosystem title={items[0].title} width='100%' margin_top='36%' margin_left='29%' isMobile={false}/>
 
                     {/* Crypto Token */}
                     <BoxEcosystem title={items[1].title} width='70%' margin_top='14.5%' margin_left='53%' isMobile={false}/>
@@ -113,7 +113,7 @@ const EcosystemSection = () => {
                     <BoxEcosystem title={items[3].title} width='100%' margin_top='15.5%' margin_right='49%' isMobile={false}/>
 
                     {/* Theorey Rules */}
-                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='36%' margin_right='44%' isMobile={false}/>
+                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='36%' margin_right='46%' isMobile={false}/>
             </EcosystemContainer>
         </>
     );
