@@ -142,7 +142,7 @@ const HeroSection = () => {
         </span>
         <GoldBarImgae src="assets/goldbar.png" alt="goldbar" />
       </TitleText>
-      <BuyButton onClick={()=>setDialog(true)}>{"Transfer/Buy"}</BuyButton>
+      <BuyButton>{"Transfer/Buy"}</BuyButton>
       <Carousel/>
     </HeroContainer>
     {dialog && <MintDialog setDialog={setDialog}/>}
