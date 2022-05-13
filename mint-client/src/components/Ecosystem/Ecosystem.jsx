@@ -22,7 +22,7 @@ const TitleText = styled('h1')({
     flexDirection: "column",
     textAlign: "center",
     marginBottom: "12vh",
-    marginTop: "-15vh",
+    // marginTop: "-15vh",
     color: "#F1F1F1",
     zIndex: 2,
 
@@ -81,8 +81,7 @@ const LinesBg = styled('img')({
 
 const EcosystemSection = () => {
     return (
-        <>
-            <EcosystemContainer>
+            <EcosystemContainer id="Ecosystem">
                 <LinesBg src={'/assets/EcosystemLinesBg.svg'} alt='Lines' />
                 <TitleText>
                     The SRG Ecosystem
@@ -101,21 +100,20 @@ const EcosystemSection = () => {
                             )})}
                 </BoxSmallContainer>
                     {/* NFT Marketplace */}
-                    <BoxEcosystem title={items[0].title} width='100%' margin_top='36%' margin_left='29%' isMobile={false}/>
+                    <BoxEcosystem title={items[0].title} width='100%' margin_top='43%' margin_left='41%' isMobile={false}/>
 
                     {/* Crypto Token */}
-                    <BoxEcosystem title={items[1].title} width='70%' margin_top='14.5%' margin_left='53%' isMobile={false}/>
+                    <BoxEcosystem title={items[1].title} width='70%' margin_top='21.5%' margin_left='53%' isMobile={false}/>
                     
                     {/* Unique Reserve */}
-                    <BoxEcosystem title={items[2].title} width='70%' margin_top='0.4%' isMobile={false}/>
+                    <BoxEcosystem title={items[2].title} width='70%' margin_top='7.4%' isMobile={false}/>
 
                     {/* NFT Series For Talents */}
-                    <BoxEcosystem title={items[3].title} width='100%' margin_top='15.5%' margin_right='49%' isMobile={false}/>
+                    <BoxEcosystem title={items[3].title} width='100%' margin_top='22.5%' margin_right='49%' isMobile={false}/>
 
                     {/* Theorey Rules */}
-                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='36%' margin_right='46%' isMobile={false}/>
+                    <BoxEcosystem title={items[4].title} content={items[4].content} width='80%' margin_top='43%' margin_right='46%' isMobile={false}/>
             </EcosystemContainer>
-        </>
     );
 }
 

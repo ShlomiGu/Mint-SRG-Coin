@@ -80,7 +80,7 @@ const TitleUnderLine = styled('div')({
 
 const PartnershipsSection = () => {
   return (
-    <PartnershipsContainer>
+    <PartnershipsContainer id="Partnerships">
         <TitleText>
             Partnerships
             <TitleUnderLine />

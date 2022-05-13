@@ -55,7 +55,7 @@ export const Column2 = styledComponent.div`
 `;
 
 const WrapText = styled('div')({
-    marginTop: '10vh',
+    // marginTop: '10vh',
     marginLeft: '7vw',
     minWidth: '50vw',
     ['@media (max-width:780px)']: {
@@ -118,7 +118,7 @@ const LinesImg = styled('img')({
 const AdvantagesSection = () => {
     return (
         <>
-            <AdvantagesContainer style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")' }}>
+            <AdvantagesContainer id="Advantages" style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")' }}>
                 <AdvantagesTable>
                     <Column1>
                         <WrapText>

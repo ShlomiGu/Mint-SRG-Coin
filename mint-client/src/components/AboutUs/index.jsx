@@ -126,7 +126,7 @@ const Content3 = styled.div`
 const AboutUsSection = () => {
     return (
         <>
-            <AboutUsContainer>
+            <AboutUsContainer id="About-us">
                 <TitleText>
                     About Us
                     <TitleUnderLine />

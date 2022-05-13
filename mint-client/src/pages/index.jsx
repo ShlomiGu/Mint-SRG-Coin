@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroSection from "../components/Hero/Hero";
 import AboutUs from "../themes/AboutUs";
 import Advantages from "../themes/Advantages";
@@ -9,7 +9,7 @@ import Partnerships from "../themes/Partnerships";
 import RoadmapContainer from "../components/Roadmap/RoadmapContainer";
 import ChartPieSection from "../components/ChartPie";
 
-function Home() {
+const Home = () => {
     return (
         <>
             <HeroSection />
