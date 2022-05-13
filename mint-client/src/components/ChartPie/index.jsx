@@ -55,7 +55,7 @@ const TitleUnderLine = styled("div")({
 
 const ChartPieSection = () => {
   return (
-    <Screen>
+    <Screen id="Allocation">
       <Title>
         SRG Token Allocation
         <TitleUnderLine />

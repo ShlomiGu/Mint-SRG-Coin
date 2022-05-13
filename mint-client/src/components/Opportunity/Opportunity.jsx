@@ -11,7 +11,7 @@ const OpportuniryContainer = styled('div')({
     alignItems: "center",
     zIndex: 1,
     overflow: 'hidden',
-    paddingBottom: '25vh',
+    // paddingBottom: '25vh',
 
     ['@media (max-width:768px)']: {
         paddingBottom: '7vh',
@@ -88,12 +88,12 @@ const OpportunitySection = () => {
     }
 
   return (
-    <OpportuniryContainer style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")' }}>
+    <OpportuniryContainer id="Opportunity" style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")' }}>
         <LinesBg src={'/assets/OpportunityLinesBg.svg'} alt='Lines' />
         <CubeImg className="Cube-2" src={"/assets/Cube2.png"} alt="cube2" />
         <Screen>
             <TitleText>
-                The Opportunity
+                The Opportunities
                 <TitleUnderLine />
             </TitleText>
             <BoxContainer>

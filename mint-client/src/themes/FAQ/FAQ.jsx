@@ -23,7 +23,7 @@ const Title = styled("div")({
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
-  marginTop: "11vw",
+  marginTop: "6vw",
   marginBottom: "5vh",
   color: "#F1F1F1",
 
@@ -69,7 +69,7 @@ const FAQ = () => {
   const [openKey, setOpenKey] = useState(-1)
 
   return (
-    <Screen>
+    <Screen id="FAQ">
       <Title>
         FAQ
         <TitleUnderLine />

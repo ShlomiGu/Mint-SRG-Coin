@@ -2,20 +2,20 @@ const data = [
     {
         date: 'May 2022',
         title: 'Pre-Sale',
-        content: `● 150,000,000 SRG TOKENS\n● Price: $0.06\n● Period: 1 Month`
+        content: `● 150,000,000 SRG TOKENS\n● Price ICO: $0.12\n● Period: 1 Month`
     },
     {
         date: 'July 2022',
         title: 'Binanace Launchpad',
-        content: '● IEO – An early sale and get listing tradable coin on the crypto exchange'
+        content: '● IEO – An early sale and get listing tradable coin on the crypto exchange\n● Price IEO: $0.15'
     },
     {
         date: 'August 2022',
         title: 'NFT Marketplace',
         content: "● Creating a collection Without a single line of code\n" +
-                "● Production of colletions in collaboration with talents\n" +
-                "● Trades only with SRG Token\n" +
-                "● Unique categories",
+                 "● Production of collections in collaboration with talents\n" +
+                 "● Trades only with SRG Token\n" +
+                 "● Unique categories",
     },
     {
         date: 'September 2022',

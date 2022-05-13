@@ -66,7 +66,7 @@ class ApexChart extends React.Component {
                   },
                   total: {
                     show: true,
-                    fontSize: '22px',
+                    fontSize: '20px',
                     // color: '#373d3f',
                     color: '#F1F1F1',
                     formatter: function (w) {
@@ -139,7 +139,7 @@ class ApexChart extends React.Component {
                       show: true,
                       total: {
                         show: true,
-                        fontSize: '11px',
+                        fontSize: '9.5px',
                       },
                       value: {
                         fontSize: '18px',

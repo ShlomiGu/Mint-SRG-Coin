@@ -1,6 +1,6 @@
 const items = [
     {
-        title: "NFT Marketplace"
+        title: "NFT Marketplace next generation"
     },
     {
         title: "Crypto Token Currency Backed By Gold"
