@@ -11,7 +11,7 @@ const OpportuniryContainer = styled('div')({
     alignItems: "center",
     zIndex: 1,
     overflow: 'hidden',
-    // paddingBottom: '25vh',
+    paddingBottom: '25vh',
 
     ['@media (max-width:768px)']: {
         paddingBottom: '7vh',

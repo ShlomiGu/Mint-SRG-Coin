@@ -13,6 +13,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  NavCounter,
 } from "./NavbarElements.jsx";
 
 // function App() {
@@ -39,7 +40,7 @@ const Navbar = ({
 
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
-    window.addEventListener('scroll', function(){
+    window.addEventListener('scrollUp', function(){
 
       // detects new state and compares it with the new one
       if ((document.body.getBoundingClientRect()).top > scrollPos){
@@ -67,6 +68,7 @@ const Navbar = ({
           <NavbarContainer>
             <NavLogoLink to="/" onClick={toggleHome}>
               <NavLogo src="assets/logo.png" alt="illumi"/>
+              <NavCounter></NavCounter>
             </NavLogoLink>
             <MobileIcon onClick={toggle}>
               <FaBars />
