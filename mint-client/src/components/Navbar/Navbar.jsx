@@ -3,6 +3,8 @@ import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 import navbarItems from "../../Data/Navbar";
+import AnimatedNumber from "react-awesome-animated-number";
+import "react-awesome-animated-number/dist/index.css";
 
 import {
   Nav,
@@ -15,6 +17,7 @@ import {
   NavLinks,
   NavCounter,
 } from "./NavbarElements.jsx";
+import { yellow } from "@mui/material/colors";
 
 // function App() {
 //   return <div style={{ userSelect: "none" }}>Unselectable text</div>;
@@ -23,8 +26,14 @@ import {
 const Navbar = ({
   toggle
 }) => {
+  const state = {
+    value: 150,
+    
+  };
+  const [num, setNum] = useState(10000);
   const [scrollNav, setScrollNav] = useState(false);
   const [show, setShow] = useState(true);
+  const formatValue = num => `$ ${Number(num).toFixed(0)}`;
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -67,8 +76,13 @@ const Navbar = ({
         <Nav scrollNav={scrollNav} show={show}>
           <NavbarContainer>
             <NavLogoLink to="/" onClick={toggleHome}>
-              <NavLogo src="assets/logo.png" alt="illumi"/>
-              <NavCounter></NavCounter>
+              <NavLogo onClick={() => setNum((state) => state + 50)} src="assets/logo.png" alt="illumi"/>
+              <AnimatedNumber
+                value={num}
+                hasComma={true}
+                size={22}
+                duration={300}
+              />
             </NavLogoLink>
             <MobileIcon onClick={toggle}>
               <FaBars />
