@@ -56,7 +56,7 @@ export const Column2 = styledComponent.div`
 
 const WrapText = styled('div')({
     // marginTop: '10vh',
-    marginLeft: '7vw',
+    marginLeft: '5vw',
     minWidth: '50vw',
     ['@media (max-width:780px)']: {
         padding: '0 0',

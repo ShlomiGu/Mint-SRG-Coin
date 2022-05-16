@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "infinite-react-carousel";
 import CarouselItem from "./CarouselItem";
 import CarouselNavButton from "./CarouselNavButton";
@@ -6,6 +6,7 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { useRef } from "react";
 import { Grid } from "@mui/material";
 import styled from 'styled-components'
+import Aos from "aos";
 
 const CarouselContainer = styled.div`
   display: flex;
@@ -27,6 +28,10 @@ const WrapButtom = styled.div`
 `
 
 const Carousel = () => {
+  useEffect(() => {
+    Aos.init({ duration: 2000 });
+  }, []);
+
   const slider = useRef(null);
 
   const handleForwardClick = () => {

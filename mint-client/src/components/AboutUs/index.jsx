@@ -66,7 +66,7 @@ const Content1 = styled.div`
         font: normal normal bold 26px/29px Poppins;
     }
     @media screen and (max-width:768px) {
-        font: normal normal bold 14px/29px Poppins;
+        font: normal normal bold 14px/24px Poppins;
         margin-bottom: 5vw;
     }
 `;
@@ -84,7 +84,7 @@ const Content2 = styled.div`
         font: normal normal normal 26px/29px Poppins;
     }
     @media screen and (max-width:768px) {
-        font: normal normal normal 12px/26px Poppins;
+        font: normal normal normal 14px/24px Poppins;
     }
 `;
 
@@ -101,7 +101,7 @@ const Title2 = styled.div`
         font: normal normal 600 30px/61px Poppins;
     }
     @media screen and (max-width:768px) {
-        font: normal normal 600 28px/61px Poppins;
+        font: normal normal 600 22px/61px Poppins;
         margin-bottom: 0;
     }
 `;
@@ -116,10 +116,9 @@ const Content3 = styled.div`
     margin: auto;
     @media screen and (max-width:1440px) {
         font: normal normal normal 18px/36px Poppins;
-        width: 85%;
     }
     @media screen and (max-width:768px) {
-        font: normal normal normal 12px/26px Poppins;
+        font: normal normal normal 14px/24px Poppins;
     }
 `;
 

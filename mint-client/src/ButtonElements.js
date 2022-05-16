@@ -51,7 +51,7 @@ export const WhitePaperButton = styled(Button)`
   border-radius: 8px;
   opacity: 1;
   font: normal normal normal 700 1.5rem/7px Poppins;
-  width: 280px;
+  width: 250px;
   height: 80px;
   text-align: center;
   margin-bottom: 22px;

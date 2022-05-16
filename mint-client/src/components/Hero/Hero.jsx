@@ -5,6 +5,7 @@ import PopupMint from "../Popup";
 import MintDialog from "../Dialog";
 import Aos from "aos";
 import { WhitePaperButton } from "../../ButtonElements";
+// import Number from "./Number";
 
 const HeroContainer = styled("div")({
   width: "86vw",
@@ -20,7 +21,7 @@ const HeroContainer = styled("div")({
 });
 
 const BuyButton = styled(Button)({
-  width: "280px",
+  width: "250px",
   height: "80px",
   background: "#FFCC00 0% 0% no-repeat padding-box",
   border: "2px solid #FFCC00",
@@ -95,8 +96,8 @@ const SunImg = styled('img')({
 
 const CubeImg1 = styled('img')((props) => ({
   position: 'absolute',
-  left: '34vw',
-  top: '22vh',
+  left: '88vw',
+  top: '14vh',
   ['@media (max-width:768px)']: {
     left: '12vw',
     height: '33vmin',
@@ -106,8 +107,8 @@ const CubeImg1 = styled('img')((props) => ({
 
 const CubeImg2 = styled('img')((props) => ({
   position: 'absolute',
-  left: '75vw',
-  top: '70vh',
+  left: '81vw',
+  top: '56vh',
   ['@media (max-width:768px)']: {
     // left: '60vw',
     height: '13vmin',
@@ -117,7 +118,7 @@ const CubeImg2 = styled('img')((props) => ({
 
 const HeroSection = () => {
   useEffect(() => {
-    Aos.init({ duration: 2000, delay: "300" });
+    Aos.init({ duration: 2000 });
   }, []);
   // controls if popup displays
   const [dialog, setDialog] = useState(false)
@@ -146,6 +147,7 @@ const HeroSection = () => {
         <BuyButton onClick={()=>setDialog(true)}>{"Transfer/Buy"}</BuyButton>
         <WhitePaperButton >{"White Paper"}</WhitePaperButton>
       </div>
+      {/* <Number /> */}
       <Carousel />
     </HeroContainer>
     {dialog && <MintDialog setDialog={setDialog}/>}

@@ -35,6 +35,8 @@ export const NavbarContainer = styled.div`
 
 export const NavLogoLink = styled(LinkR)`
   height: 100%;
+  color: white;
+  text-decoration-line: unset;
 `;
 
 export const NavCounter = styled.div`
