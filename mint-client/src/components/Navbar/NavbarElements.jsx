@@ -37,6 +37,10 @@ export const NavLogoLink = styled(LinkR)`
   height: 100%;
 `;
 
+export const NavCounter = styled.div`
+
+`
+
 export const NavLogo = styled.img`
   color: #fff;
   justify-self: flex-start;
@@ -46,8 +50,8 @@ export const NavLogo = styled.img`
   align-items: center;
   font-weight: bold;
   text-decoration: none;
-  width: 70px;
-  margin: 5px 0;
+  width: 50px;
+  /* margin: 5px 0; */
   height: auto;
 `;
 

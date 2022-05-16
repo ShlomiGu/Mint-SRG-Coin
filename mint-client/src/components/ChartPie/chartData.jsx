@@ -43,6 +43,6 @@ const elements = [
     },
 ]
 
-export const colors = ["#FFCA0A", "#6B6B6B", "#747474", "#999999", "#B7B7B7", "#D6D6D6", "#E2E2E2"]
+export const colors = ["#FFCA0A", "#A48C2D", "#958853", "#B5AD8A", "#B7B7B7", "#D6D6D6", "#E2E2E2"]
 export const names = ["Exchanges", "Staking", "Burn Mechanism", "Management & Advisory & Team", "Development & Growth", "Gold Purchase", "Donation Plan"]
 export default elements;

@@ -4,6 +4,7 @@ import Carousel from "./Carousel";
 import PopupMint from "../Popup";
 import MintDialog from "../Dialog";
 import Aos from "aos";
+import { WhitePaperButton } from "../../ButtonElements";
 
 const HeroContainer = styled("div")({
   width: "86vw",
@@ -141,7 +142,10 @@ const HeroSection = () => {
         </span>
         <GoldBarImgae src="assets/goldbar.png" alt="goldbar" data-aos="zoom-in" data-aos-delay="2500"/>
       </TitleText>
-      <BuyButton onClick={()=>setDialog(true)} data-aos="fade-right" data-aos-delay="3000">{"Transfer/Buy"}</BuyButton>
+      <div style={{display: "flex"}} data-aos="fade-right" data-aos-delay="3000">
+        <BuyButton onClick={()=>setDialog(true)}>{"Transfer/Buy"}</BuyButton>
+        <WhitePaperButton >{"White Paper"}</WhitePaperButton>
+      </div>
       <Carousel />
     </HeroContainer>
     {dialog && <MintDialog setDialog={setDialog}/>}

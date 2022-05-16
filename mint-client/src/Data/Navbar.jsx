@@ -1,8 +1,10 @@
+const DEFAULT_OFFSET = -80;
+
 const navbarItems = [
     {
         id: "About-us", 
         name: 'About us',
-        offset: -80,
+        offset: DEFAULT_OFFSET,
     },
     {
         id: "Opportunity",
@@ -12,17 +14,17 @@ const navbarItems = [
     {
         id: "Ecosystem",
         name: "Ecosystem",
-        offset: -80,
+        offset: DEFAULT_OFFSET,
     },
     {
         id: "Allocation",
         name: "Allocation",
-        offset: -80,
+        offset: -77,
     },
     {
         id: "Roadmap",
         name: "Roadmap",
-        offset: -80,
+        offset: -82,
     },
     {
         id: "Advantages",

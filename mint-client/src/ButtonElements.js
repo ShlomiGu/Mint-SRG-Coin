@@ -42,3 +42,36 @@ export const WalletButton = styled(Link)`
     box-shadow: 0px 5px 15px #FFCC0073;
   }
 `;
+
+export const WhitePaperButton = styled(Button)`
+  background: var(--unnamed-color-060707) 0% 0% no-repeat padding-box;
+  border: 2px solid var(--unnamed-color-ffcc00);
+  background: #060707 0% 0% no-repeat padding-box;
+  border: 2px solid #FFCC00;
+  border-radius: 8px;
+  opacity: 1;
+  font: normal normal normal 700 1.5rem/7px Poppins;
+  width: 280px;
+  height: 80px;
+  text-align: center;
+  margin-bottom: 22px;
+  color: #FFCC00;
+  padding: 0;
+  margin: 20px 0px 20px 30px;
+  /* transition: all 0.2s ease-in-out 0.3s; */
+
+  &:hover {
+    background: #FFCC00 0% 0% no-repeat padding-box;
+    color: black;
+    box-shadow: 0px 5px 15px #FFCC0073;
+  }
+
+  @media screen and (max-width:768px) {
+    font: normal normal 600 14px/7px Poppins;
+    width: 37vw;
+    height: 50px;
+    margin-bottom: 15px;
+    padding: 0;
+  },  
+
+`;
