@@ -50,14 +50,14 @@ export const WhitePaperButton = styled(Button)`
   border: 2px solid #FFCC00;
   border-radius: 8px;
   opacity: 1;
-  font: normal normal normal 700 1.5rem/7px Poppins;
-  width: 250px;
-  height: 80px;
+  font: normal normal 600 16px/8px Poppins;
+  width: 179px;
+  height: 48px;
   text-align: center;
-  margin-bottom: 22px;
+  /* margin-bottom: 22px; */
   color: #FFCC00;
   padding: 0;
-  margin: 20px 0px 20px 30px;
+  /* margin: 20px 0px 20px 30px; */
   /* transition: all 0.2s ease-in-out 0.3s; */
 
   &:hover {
@@ -70,7 +70,7 @@ export const WhitePaperButton = styled(Button)`
     font: normal normal 600 14px/7px Poppins;
     width: 37vw;
     height: 50px;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
     padding: 0;
   },  
 

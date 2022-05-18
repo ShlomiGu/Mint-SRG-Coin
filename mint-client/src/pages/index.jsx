@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HeroSection from "../components/Hero/Hero";
 import AboutUs from "../themes/AboutUs";
 import Advantages from "../themes/Advantages";
@@ -12,7 +12,7 @@ import ChartPieSection from "../components/ChartPie";
 const Home = () => {
     return (
         <>
-            <HeroSection />
+            <HeroSection/>
             <AboutUs />
             <Opportunity />
             <Ecosystem />

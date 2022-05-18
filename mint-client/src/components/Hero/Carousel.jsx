@@ -43,7 +43,7 @@ const Carousel = () => {
   };
   return (
     // <Grid item container xs={12} justifyContent={'flex-end'}>
-      <CarouselContainer data-aos="fade-left" data-aos-delay="3000">        
+      <CarouselContainer data-aos-offset="-300" data-aos="fade-left" data-aos-delay="3000">        
       <Grid item xs={1} display={'flex'} alignItems={'center'}>
         <WrapButtom>
           <CarouselNavButton icon={faAngleLeft} onClick={handlePrevClick}/>

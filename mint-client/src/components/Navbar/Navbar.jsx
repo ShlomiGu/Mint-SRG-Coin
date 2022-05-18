@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaFile } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 import navbarItems from "../../Data/Navbar";
@@ -18,6 +18,7 @@ import {
   NavCounter,
 } from "./NavbarElements.jsx";
 import { yellow } from "@mui/material/colors";
+import { WhitePaperButton } from "../../ButtonElements";
 
 // function App() {
 //   return <div style={{ userSelect: "none" }}>Unselectable text</div>;
@@ -85,7 +86,10 @@ const Navbar = ({
               />
             </NavLogoLink>
             <MobileIcon onClick={toggle}>
-              <FaBars />
+              <div>
+                {/* <WhitePaperButton>{"White Paper"}</WhitePaperButton> */}
+                <FaBars />
+              </div>
             </MobileIcon>
             <NavMenu>
             {navbarItems.map((item, index) => {          
@@ -105,6 +109,9 @@ const Navbar = ({
                         </NavItem>
                     )
             })}
+            <NavItem>
+                <WhitePaperButton>{"White Paper"}</WhitePaperButton>
+            </NavItem>
             </NavMenu>
           </NavbarContainer>
         </Nav>
