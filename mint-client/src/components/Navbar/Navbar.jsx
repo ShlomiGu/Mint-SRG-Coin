@@ -11,6 +11,7 @@ import {
   NavbarContainer,
   NavLogoLink,
   NavLogo,
+  NavSRGLogo,
   MobileIcon,
   NavMenu,
   NavItem,
@@ -31,7 +32,7 @@ const Navbar = ({
     value: 150,
     
   };
-  const [num, setNum] = useState(10000);
+  const [num, setNum] = useState(150000000 * 0.12);
   const [scrollNav, setScrollNav] = useState(false);
   const [show, setShow] = useState(true);
   const formatValue = num => `$ ${Number(num).toFixed(0)}`;
@@ -78,12 +79,15 @@ const Navbar = ({
           <NavbarContainer>
             <NavLogoLink to="/" onClick={toggleHome}>
               <NavLogo onClick={() => setNum((state) => state + 50)} src="assets/logo.png" alt="illumi"/>
-              <AnimatedNumber
-                value={num}
-                hasComma={true}
-                size={22}
-                duration={300}
-              />
+              <div style={{display: "grid"}}>
+                <NavSRGLogo onClick={() => setNum((state) => state + 50)} src="assets/navbar/SRGLogo.svg" alt="illumi"/>
+                <AnimatedNumber
+                  value={num}
+                  hasComma={true}
+                  size={16}
+                  duration={300}
+                />
+              </div>
             </NavLogoLink>
             <MobileIcon onClick={toggle}>
               <div>
