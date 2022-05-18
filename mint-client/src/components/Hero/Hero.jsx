@@ -116,7 +116,7 @@ const CubeImg2 = styled('img')((props) => ({
   position: 'absolute',
   left: '81vw',
   top: '56vh',
-  width: '104px',
+  width: '50',
   height: '113px',
   ['@media (max-width:768px)']: {
     // left: '60vw',

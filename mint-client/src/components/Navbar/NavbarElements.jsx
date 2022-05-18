@@ -37,6 +37,7 @@ export const NavLogoLink = styled(LinkR)`
   height: 100%;
   color: white;
   text-decoration-line: unset;
+  display: flex;
 `;
 
 export const NavCounter = styled.div`
@@ -52,8 +53,22 @@ export const NavLogo = styled.img`
   align-items: center;
   font-weight: bold;
   text-decoration: none;
-  width: 50px;
-  /* margin: 5px 0; */
+  width: 70px;
+  margin: 5px 0;
+  height: auto;
+`;
+
+export const NavSRGLogo = styled.img`
+  color: #fff;
+  /* justify-self: flex-start; */
+  cursor: pointer;
+  font-size: 1.5rem;
+  /* display: flex; */
+  align-items: center;
+  font-weight: bold;
+  text-decoration: none;
+  width: 70px;
+  margin: 5px 0 0 0;
   height: auto;
 `;
 
