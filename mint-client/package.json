@@ -26,6 +26,7 @@
     "react-dom": "^16.14.0",
     "react-icons": "^4.3.1",
     "react-pie3d": "^1.0.0",
+    "react-progressbar-fancy": "^1.1.4",
     "react-router-dom": "^6.2.2",
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.7",

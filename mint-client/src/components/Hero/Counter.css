@@ -1,0 +1,14 @@
+.ReactAwesomeAnimatedNumber {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    letter-spacing: 14px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ReactAwesomeAnimatedNumber {
+      display: inline-flex;
+      flex-direction: row-reverse;
+      letter-spacing: 8px;
+    }
+  }
+  
