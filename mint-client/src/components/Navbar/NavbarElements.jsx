@@ -16,7 +16,7 @@ export const Nav = styled.nav`
   user-select: none;
   transition-timing-function: ease-in;
   transition: 0.5s;
-  /* opacity: ${({show}) => (show ? 1 : 0)}; */
+  opacity: ${({show}) => (show ? 1 : 0)};
   /* opacity: 0.8; */
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -99,6 +99,7 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
   /* height: 80px; */
+  height: ${({button}) => (button ? "" : '90%')};
 `;
 
 export const NavLinks = styled(LinkS)`
