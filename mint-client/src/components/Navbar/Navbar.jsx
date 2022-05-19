@@ -36,6 +36,7 @@ const Navbar = ({
   const [scrollNav, setScrollNav] = useState(false);
   const [show, setShow] = useState(true);
   const formatValue = num => `$ ${Number(num).toFixed(0)}`;
+  // const [scrollPos, setScrollPos] = React.useState(0);
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -46,27 +47,43 @@ const Navbar = ({
   };
 
   var scrollPos = 0;
-  // adding scroll event
+  const scrollingFunc = () => {
+      // detects new state and compares it with the new one
+      let currPos = window.scrollY
+  
+      if (((currPos > scrollPos)))
+        setShow(false)
+      
+      else if(((currPos < scrollPos)) || currPos < 100)
+        setShow(true)
+      
+
+      
+      
+        // saves the new position for iteration.
+      scrollPos = (currPos);
+  };
   
 
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
-    window.addEventListener('scrollUp', function(){
 
-      // detects new state and compares it with the new one
-      if ((document.body.getBoundingClientRect()).top > scrollPos){
-        setShow(true)
-        console.log("true")
-      }
-      else{
-        setShow(false)
-        console.log("false")
-      }
-      
-        // saves the new position for iteration.
-      scrollPos = (document.body.getBoundingClientRect()).top;
-  });
-  });
+
+    // element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+    // element.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+    //   var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+    //   if (st > lastScrollTop){
+    //     setShow(true)
+    //     console.log("true")
+    //   } else {
+    //     setShow(false)
+    //     console.log("false")
+    //   }
+    //   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    // }, false);
+
+    window.addEventListener('scroll', scrollingFunc)
+  }, []);
 
   const toggleHome = () => {
     scroll.scrollToTop();
@@ -113,7 +130,7 @@ const Navbar = ({
                         </NavItem>
                     )
             })}
-            <NavItem>
+            <NavItem button={true}>
                 <WhitePaperButton>{"White Paper"}</WhitePaperButton>
             </NavItem>
             </NavMenu>
