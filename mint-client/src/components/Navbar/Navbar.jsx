@@ -51,11 +51,11 @@ const Navbar = ({
       // detects new state and compares it with the new one
       let currPos = window.scrollY
   
-      if (((currPos > scrollPos)))
-        setShow(false)
-      
-      else if(((currPos < scrollPos)) || currPos < 100)
+      if(((currPos < scrollPos)) || currPos < 100)
         setShow(true)
+
+      else if (((currPos > scrollPos)))
+        setShow(false)
       
 
       
@@ -96,14 +96,18 @@ const Navbar = ({
           <NavbarContainer>
             <NavLogoLink to="/" onClick={toggleHome}>
               <NavLogo onClick={() => setNum((state) => state + 50)} src="assets/logo.png" alt="illumi"/>
-              <div style={{display: "grid"}}>
+              <div style={{display: "grid", marginLeft: "10px"}}>
                 <NavSRGLogo onClick={() => setNum((state) => state + 50)} src="assets/navbar/SRGLogo.svg" alt="illumi"/>
-                <AnimatedNumber
-                  value={num}
-                  hasComma={true}
-                  size={16}
-                  duration={300}
-                />
+                <div>
+                  <span style={{fontSize: 14}}>$</span>
+                  <AnimatedNumber 
+                    className="NavbarReactAwesomeAnimatedNumber"
+                    value={num}
+                    hasComma={true}
+                    size={14}
+                    duration={300}
+                  />
+                </div>
               </div>
             </NavLogoLink>
             <MobileIcon onClick={toggle}>

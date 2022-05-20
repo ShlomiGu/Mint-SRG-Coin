@@ -52,7 +52,6 @@ const TitleText = styled(Typography)({
   fontWeight: "bold",
   maxWidth: "1400px",
   zIndex: 1,
-  marginTop: "40px",
 
   ['@media (max-width:1440px)']: {
     font: "normal normal bold 38px/70px Poppins;",
@@ -107,7 +106,7 @@ const CubeImg1 = styled('img')((props) => ({
   height: '134px',
   ['@media (max-width:768px)']: {
     left: '12vw',
-    height: '33vmin',
+    height: '28vmin',
     top: '24vh',
   },
 }))
@@ -119,8 +118,7 @@ const CubeImg2 = styled('img')((props) => ({
   width: '50',
   height: '113px',
   ['@media (max-width:768px)']: {
-    // left: '60vw',
-    height: '13vmin',
+    height: '17vmin',
     top: '64vh',
   },
 }))
@@ -178,7 +176,7 @@ const HeroSection = () => {
       <TitleText data-aos="fade-right" data-aos-delay="1000">
         <span>
           From the dawn of history mankind has given<br/> value to coins through a
-          backup reserve.<br/> The oldest and most reliable being <span style={{color: "#FFCC00"}}>GOLD</span>
+          backup reserve.<br/> The oldest and most reliable being <span data-aos="zoom-in" data-aos-delay="1700" style={{color: "#FFCC00"}}>GOLD</span>
         </span>
       </TitleText>
       <div data-aos="fade-right" data-aos-delay="3000">
