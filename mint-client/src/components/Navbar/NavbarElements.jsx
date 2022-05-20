@@ -25,7 +25,7 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 80px;
   z-index: 1;
   width: 100%;
@@ -91,7 +91,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px;
+  /* margin-right: -22px; */
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -110,7 +110,10 @@ export const NavLinks = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  font: normal normal medium 16px/59px Poppins;
   font-weight: bold;
+
+
   &.active {
     border-bottom: 3px solid #FFCC00;
     color: #FFCC00;
