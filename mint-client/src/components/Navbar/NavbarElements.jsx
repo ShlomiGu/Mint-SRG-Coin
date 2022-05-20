@@ -68,7 +68,7 @@ export const NavSRGLogo = styled.img`
   font-weight: bold;
   text-decoration: none;
   width: 70px;
-  margin: 5px 0 0 0;
+  margin: 13px 0 -5px 0;
   height: auto;
 `;
 
