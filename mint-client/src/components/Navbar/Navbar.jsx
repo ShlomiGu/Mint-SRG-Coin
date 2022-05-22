@@ -46,6 +46,13 @@ const Navbar = ({
     }
   };
 
+  const changeScroll = () => {
+    window.removeEventListener('scroll', scrollingFunc)
+    setShow(false);
+    setTimeout(1000)
+    window.addEventListener('scroll', scrollingFunc)
+  }
+
   var scrollPos = 0;
   const scrollingFunc = () => {
       // detects new state and compares it with the new one
@@ -56,11 +63,7 @@ const Navbar = ({
 
       else if (((currPos > scrollPos)))
         setShow(false)
-      
 
-      
-      
-        // saves the new position for iteration.
       scrollPos = (currPos);
   };
   
@@ -82,7 +85,7 @@ const Navbar = ({
     //   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     // }, false);
 
-    window.addEventListener('scroll', scrollingFunc)
+    // window.addEventListener('scroll', scrollingFunc)
   }, []);
 
   const toggleHome = () => {
@@ -128,6 +131,7 @@ const Navbar = ({
                             spy={true}
                             exact="true"
                             offset={item.offset}
+                            onClick={changeScroll}
                             >
                             {item.name}
                             </NavLinks>

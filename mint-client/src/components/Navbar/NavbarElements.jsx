@@ -14,8 +14,8 @@ export const Nav = styled.nav`
   top: 0;
   z-index: 10;
   user-select: none;
-  transition-timing-function: ease-in;
-  transition: 0.5s;
+  transition: 0.8s all ease;
+
   opacity: ${({show}) => (show ? 1 : 0)};
   /* opacity: 0.8; */
   @media screen and (max-width: 960px) {
@@ -31,6 +31,9 @@ export const NavbarContainer = styled.div`
   width: 100%;
   padding: 0 24px;
   max-width: 90%;
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 export const NavLogoLink = styled(LinkR)`
@@ -110,7 +113,7 @@ export const NavLinks = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-  font: normal normal medium 16px/59px Poppins;
+  font: normal normal normal 16px/59px Poppins;
   font-weight: bold;
 
 
