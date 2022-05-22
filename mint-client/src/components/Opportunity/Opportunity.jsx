@@ -90,7 +90,7 @@ const OpportunitySection = () => {
   return (
     <OpportuniryContainer id="Opportunity" style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")' }}>
         <LinesBg src={'/assets/OpportunityLinesBg.svg'} alt='Lines' />
-        <CubeImg className="Cube-2" src={"/assets/Cube2.png"} alt="cube2" />
+        <CubeImg className="Cube-2" src={"/assets/Cubes/GoldCube2.svg"} alt="cube2" />
         <Screen>
             <TitleText>
                 The Opportunities

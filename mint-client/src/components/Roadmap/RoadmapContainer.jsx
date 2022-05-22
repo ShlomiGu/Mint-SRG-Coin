@@ -72,8 +72,8 @@ const FinishContainer = styled("div")({
 const RoadmapContainer = () => {
   return (
     <Screen id="Roadmap">
-      <CubeImg1 className="Cube-1" src={"/assets/Cube1.png"} alt="cube1" />
-      <CubeImg2 className="Cube-2" src={"/assets/Cube2.png"} alt="cube2" />
+      <CubeImg1 className="Cube-1" src={"/assets/Cubes/GoldCube1.svg"} alt="cube1" />
+      <CubeImg2 className="Cube-2" src={"/assets/Cubes/GoldCube2.svg"} alt="cube2" />
 
       <Title>
         The Roadmap
