@@ -47,10 +47,13 @@ const Navbar = ({
   };
 
   const changeScroll = () => {
+    console.log("before = " + window.scrollY)
     window.removeEventListener('scroll', scrollingFunc)
     setShow(false);
     setTimeout(1000)
     window.addEventListener('scroll', scrollingFunc)
+    window.scrollTo(window.scrollX, window.scrollY - 1);
+    console.log("after = " + window.scrollY)
   }
 
   var scrollPos = 0;
@@ -85,7 +88,7 @@ const Navbar = ({
     //   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
     // }, false);
 
-    // window.addEventListener('scroll', scrollingFunc)
+    window.addEventListener('scroll', scrollingFunc)
   }, []);
 
   const toggleHome = () => {
