@@ -225,11 +225,11 @@ const AboutUsSection = () => {
                     <Column2>
                         <div>
                             <GoldBar  className='' src={"/assets/Cubes/GoldBar.png"} typeof='' alt='logo' />
-                            <CubeImg1 left={'70vw'} top={'3vh'} MLeft={'26vw'} MTop={'72vh'} className="Cube-1" src={"/assets/Cubes/GoldCube1.svg"} alt="cube1" />
-                            <CubeImg2 left={'53vw'} top={'6vh'} MLeft={'7vw'} MTop={'83vh'} className="Cube-2" src={"/assets/Cubes/GoldCube2.svg"} alt="cube2" />
-                            <CubeImg1 left={'82vw'} top={'10vh'} MLeft={'60vw'} MTop={'81vh'} className="Cube-3" src={"/assets/Cubes/GoldCube3.svg"} alt="cube1" />
-                            <CubeImg1 left={'80vw'} top={'40vh'} MLeft={'60vw'} MTop={'93vh'} className="Cube-4" src={"/assets/Cubes/GoldCube4.svg"} alt="cube1" />
-                            <CubeImg1 left={'53vw'} top={'40vh'} MLeft={'5vw'} MTop={'90vh'} className="Cube-1" src={"/assets/Cubes/GoldCube5.svg"} alt="cube1" />
+                            <CubeImg1 left={'70vw'} top={'3vh'} MLeft={'26vw'} MTop={'75vh'} className="Cube-1" src={"/assets/Cubes/GoldCube1.svg"} alt="cube1" />
+                            <CubeImg2 left={'53vw'} top={'6vh'} MLeft={'7vw'} MTop={'86vh'} className="Cube-2" src={"/assets/Cubes/GoldCube2.svg"} alt="cube2" />
+                            <CubeImg1 left={'82vw'} top={'10vh'} MLeft={'60vw'} MTop={'84vh'} className="Cube-3" src={"/assets/Cubes/GoldCube3.svg"} alt="cube1" />
+                            <CubeImg1 left={'80vw'} top={'40vh'} MLeft={'60vw'} MTop={'96vh'} className="Cube-4" src={"/assets/Cubes/GoldCube4.svg"} alt="cube1" />
+                            <CubeImg1 left={'53vw'} top={'40vh'} MLeft={'5vw'} MTop={'93vh'} className="Cube-1" src={"/assets/Cubes/GoldCube5.svg"} alt="cube1" />
                         </div>
                     </Column2>
                 </AboutTable>

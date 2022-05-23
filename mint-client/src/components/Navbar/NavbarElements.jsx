@@ -103,6 +103,12 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   /* height: 80px; */
   height: ${({button}) => (button ? "" : '90%')};
+  @media screen and (min-width: 1600px) {
+    min-width: 100px;
+  }
+  @media screen and (min-width: 1024px) {
+    min-width: 80px;
+  }
 `;
 
 export const NavLinks = styled(LinkS)`
