@@ -167,7 +167,7 @@ const HeroSection = () => {
     <HeroContainer
       style={{ backgroundImage: 'url("assets/DesktopSkyBackground.png")', backgroundSize:'cover', backgroundRepeat: 'no-repeat' }}
     >
-      <SunImg src="assets/MainHeaderLinesBlackCircle.svg" alt="sun" />
+      <SunImg src="assets/MainHeaderLinesGoldCircle.svg" alt="sun" />
       <CubeImg1 className="Cube-1" src={"/assets/Cubes/GoldCube1.svg"} alt="cube1" />
       <CubeImg2 className="Cube-2" src={"/assets/Cubes/GoldCube2.svg"} alt="cube2" />
       {/* <WrapLogo data-aos="fade-down">
