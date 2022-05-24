@@ -12,6 +12,10 @@ const AboutUsContainer = styled.div`
     z-index: 1;
     /* overflow: hidden; */
     background-image: url("assets/DesktopSkyBackground.png");
+
+    @media screen and (min-width: 769px) {
+        padding-top: 200px;
+    }
 `
 
 const AboutTable = styled.div`
@@ -45,11 +49,9 @@ export const Column2 = styled.div`
     z-index: 0;
     /* margin-left: 10vw; */
 
-    /* @media screen and (max-width: 768px) {
-        padding: 0 0;
-        margin: 0;
-        margin-top: 2vh;
-    } */
+    @media screen and (max-width: 768px) {
+        /* margin-top: 40px; */
+    }
 `;
 
 const WrapText = styled.div`
@@ -111,14 +113,14 @@ const Content1 = styled.div`
 
 const Content2 = styled.div`
     color: var(--unnamed-color-f1f1f1);
-    font: normal normal normal 26px/43px Poppins;
+    font: normal normal normal 20px/36px Poppins;
     letter-spacing: 0px;
     color: #F1F1F1;
     opacity: 1;
     margin-bottom: 4vw;
 
     @media screen and (max-width:1440px) {
-        font: normal normal normal 26px/29px Poppins;
+        font: normal normal normal 20px/36px Poppins;
     }
     @media screen and (max-width:768px) {
         font: normal normal normal 14px/24px Poppins;
@@ -146,7 +148,7 @@ const Title2 = styled.div`
 
 const Content3 = styled.div`
     color: var(--unnamed-color-f1f1f1);
-    font: normal normal normal 26px/36px Poppins;
+    font: normal normal normal 20px/36px Poppins;
     letter-spacing: 0px;
     color: #F1F1F1;
     opacity: 1;
@@ -164,7 +166,7 @@ const CubeImg1 = styled('img')((props) => ({
     position: 'absolute',
     left: props.left,
     top: props.top,
-    width: '118px',
+    width: props.width,
     height: '134px',
     zIndex: 1,
     ['@media (max-width:768px)']: {
@@ -178,7 +180,7 @@ const CubeImg1 = styled('img')((props) => ({
     position: 'absolute',
     left: props.left,
     top: props.top,
-    width: '50',
+    width: '83px',
     height: '113px',
     ['@media (max-width:768px)']: {
         left: props.MLeft,
@@ -189,11 +191,10 @@ const CubeImg1 = styled('img')((props) => ({
 
 const GoldBar = styled.img`
     /* position: absolute; */
-    height: 100vmin;
-    margin-left: 3%;
+    height: 70vmin;
     @media screen and (max-width:780px) {
-        /* height: 60vmin; */
-        margin-top: 5vh;
+        height: 100vmin;
+        margin-top: 40px;
     },
 `
 
@@ -225,11 +226,11 @@ const AboutUsSection = () => {
                     <Column2>
                         <div>
                             <GoldBar  className='' src={"/assets/Cubes/GoldBar.png"} typeof='' alt='logo' />
-                            <CubeImg1 left={'70vw'} top={'3vh'} MLeft={'26vw'} MTop={'75vh'} className="Cube-1" src={"/assets/Cubes/GoldCube1.svg"} alt="cube1" />
-                            <CubeImg2 left={'53vw'} top={'6vh'} MLeft={'7vw'} MTop={'86vh'} className="Cube-2" src={"/assets/Cubes/GoldCube2.svg"} alt="cube2" />
-                            <CubeImg1 left={'82vw'} top={'10vh'} MLeft={'60vw'} MTop={'84vh'} className="Cube-3" src={"/assets/Cubes/GoldCube3.svg"} alt="cube1" />
-                            <CubeImg1 left={'80vw'} top={'40vh'} MLeft={'60vw'} MTop={'96vh'} className="Cube-4" src={"/assets/Cubes/GoldCube4.svg"} alt="cube1" />
-                            <CubeImg1 left={'53vw'} top={'40vh'} MLeft={'5vw'} MTop={'93vh'} className="Cube-1" src={"/assets/Cubes/GoldCube5.svg"} alt="cube1" />
+                            <CubeImg1 width={'100px'} left={'66vw'} top={'-8vh'} MLeft={'26vw'} MTop={'75vh'} className="Cube-1" src={"/assets/Cubes/GoldCube1.svg"} alt="cube1" />
+                            <CubeImg2 left={'59vw'} top={'14vh'} MLeft={'7vw'} MTop={'86vh'} className="Cube-2" src={"/assets/Cubes/GoldCube2.svg"} alt="cube2" />
+                            <CubeImg1 width={'118px'} left={'79vw'} top={'13vh'} MLeft={'60vw'} MTop={'84vh'} className="Cube-3" src={"/assets/Cubes/GoldCube3.svg"} alt="cube1" />
+                            <CubeImg1 width={'85px'} left={'76vw'} top={'39vh'} MLeft={'60vw'} MTop={'96vh'} className="Cube-4" src={"/assets/Cubes/GoldCube4.svg"} alt="cube1" />
+                            <CubeImg1 width={'86px'} left={'59vw'} top={'36vh'} MLeft={'5vw'} MTop={'93vh'} className="Cube-1" src={"/assets/Cubes/GoldCube5.svg"} alt="cube1" />
                         </div>
                     </Column2>
                 </AboutTable>

@@ -3,7 +3,8 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-  background: ${({scrollNav}) => (scrollNav ? 'rgba(0, 0, 0, .7)' : 'rgba(0, 0, 0, 1)')};
+  /* background: ${({scrollNav}) => (scrollNav ? 'rgba(0, 0, 0, .7)' : 'rgba(0, 0, 0, 1)')}; */
+  background: rgba(0, 0, 0, 1);
   height: 80px;
   margin-top: 0;
   display: flex;
@@ -16,7 +17,7 @@ export const Nav = styled.nav`
   user-select: none;
   transition: 0.8s all ease;
 
-  opacity: ${({show}) => (show ? 1 : 0)};
+  /* opacity: ${({show}) => (show ? 1 : 0)}; */
   /* opacity: 0.8; */
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;

@@ -3,7 +3,7 @@
     <clipPath id="clip-path">
       <rect id="Rectangle_17520" data-name="Rectangle 17520" width="1920" height="1080" fill="#fff" opacity="0.11"/>
     </clipPath>
-    <linearGradient id="linear-gradient" x1="1.137" y1="0.041" x2="0.316" y2="1.03" gradientUnits="objectBoundingBox">
+    <linearGradient id="linear-gradient" x1="1.137" y1="0.041" x2="0.624" y2="0.821" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#fff"/>
       <stop offset="1"/>
     </linearGradient>
