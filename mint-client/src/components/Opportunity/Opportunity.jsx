@@ -19,7 +19,7 @@ const OpportuniryContainer = styled('div')({
 });
 
 const Screen = styled('div')({
-    width: '90%',
+    width: '80%',
     ['@media (max-width:780px)']: {
         width: '100%',
     }
@@ -62,7 +62,7 @@ const BoxContainer = styled('div')({
 const CubeImg = styled('img')({
     position: 'absolute',
     left: '80vw',
-    top: '250vh',
+    top: '300vh',
     ['@media (max-width:780px)']: {
         left: '60vw',
         top: '310vh',

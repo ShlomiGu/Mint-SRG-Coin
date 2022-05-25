@@ -17,7 +17,7 @@ const HeroContainer = styled("div")({
   flexDirection: "column",
   zIndex: "1",
   overflow: "hidden",
-  padding: "5vh 7vw",
+  padding: "5vh 10vw",
   ['@media (max-width:768px)']: {
     padding: "3vh 7vw",
   },  
@@ -123,6 +123,12 @@ const CubeImg2 = styled('img')((props) => ({
   },
 }))
 
+const WrapNumbers = styled('div')({
+  ['@media (min-width:1440px)']: {
+    marginBottom: "-35vh",
+  },  
+})
+
 const HeroSection = () => {
   const supply = 150000000
   const [num, setNum] = useState(150000000 * 0.12);
@@ -181,6 +187,8 @@ const HeroSection = () => {
       </TitleText>
       <div data-aos="fade-right" data-aos-delay="3000">
         <BuyButton onClick={()=>setDialog(true)}>{"Transfer/Buy"}</BuyButton>
+        <WrapNumbers>
+
         <div style={{color: "white", marginBottom: "30px"}}>
           <span style={{fontSize: size}}>$</span>
           <AnimatedNumber
@@ -198,7 +206,8 @@ const HeroSection = () => {
               progressWidth={processWidth} 
               primaryColor={"#FFCC00"} 
               secondaryColor={"#FFCC00"}
-          />
+              />
+          </WrapNumbers>
       </div>
       <Carousel />
     </HeroContainer>

@@ -32,7 +32,6 @@ export const AdvantagesTable = styledComponent.div`
 
 export const Column1 = styledComponent.div`
     background-color: transparent !important;
-    padding: 0 20px;
     grid-area: col1;
 
     @media screen and (max-width: 768px) {
@@ -56,7 +55,7 @@ export const Column2 = styledComponent.div`
 
 const WrapText = styled('div')({
     // marginTop: '10vh',
-    marginLeft: '5vw',
+    marginLeft: '10vw',
     minWidth: '50vw',
     ['@media (max-width:780px)']: {
         padding: '0 0',

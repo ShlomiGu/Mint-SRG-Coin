@@ -1,4 +1,4 @@
-const DEFAULT_OFFSET = 0;
+const DEFAULT_OFFSET = -80;
 
 const navbarItems = [
     {
@@ -19,12 +19,12 @@ const navbarItems = [
     {
         id: "Allocation",
         name: "Allocation",
-        offset: -77,
+        offset: DEFAULT_OFFSET,
     },
     {
         id: "Roadmap",
         name: "Roadmap",
-        offset: -82,
+        offset: DEFAULT_OFFSET,
     },
     {
         id: "Advantages",

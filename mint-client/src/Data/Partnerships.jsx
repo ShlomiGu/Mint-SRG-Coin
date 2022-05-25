@@ -3,31 +3,31 @@ const PartnersImages = [
         image: "assets/logo.png"
     },
     {
-        image: "assets/goldbar.png"
+        image: "assets/SRGPentagon.png"
     },
     {
         image: "assets/logo.png"
     },
     {
-        image: "assets/goldbar.png"
+        image: "assets/SRGPentagon.png"
     },
     {
         image: "assets/logo.png"
     },
     {
-        image: "assets/goldbar.png"
+        image: "assets/SRGPentagon.png"
     },
     {
         image: "assets/logo.png"
     },
     {
-        image: "assets/goldbar.png"
+        image: "assets/SRGPentagon.png"
     },
     {
         image: "assets/logo.png"
     },
     {
-        image: "assets/goldbar.png"
+        image: "assets/SRGPentagon.png"
     },
 ]
 
