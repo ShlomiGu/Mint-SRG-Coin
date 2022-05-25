@@ -14,6 +14,7 @@ const CarouselContainer = styled.div`
   @media screen and (min-width: 769px) {
     justify-content: flex-end;
     margin-left: 93vw;
+    padding-top: 10vh;
   }
 `;
 

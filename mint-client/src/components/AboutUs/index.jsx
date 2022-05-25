@@ -14,12 +14,12 @@ const AboutUsContainer = styled.div`
     background-image: url("assets/DesktopSkyBackground.png");
 
     @media screen and (min-width: 769px) {
-        padding-top: 200px;
+        padding-top: 90px;
     }
 `
 
 const AboutTable = styled.div`
-    width: 90%;
+    width: 80%;
     position: relative;
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
@@ -34,7 +34,6 @@ const AboutTable = styled.div`
 
 export const Column1 = styled.div`
     background-color: transparent !important;
-    padding: 0 20px;
     grid-area: col1;
 
     @media screen and (max-width: 768px) {
@@ -191,10 +190,12 @@ const CubeImg1 = styled('img')((props) => ({
 
 const GoldBar = styled.img`
     /* position: absolute; */
+    margin-bottom: -17vh;
     height: 70vmin;
-    @media screen and (max-width:780px) {
+    @media screen and (max-width:768px) {
         height: 100vmin;
         margin-top: 40px;
+        margin-bottom: -8vh;
     },
 `
 
@@ -226,11 +227,11 @@ const AboutUsSection = () => {
                     <Column2>
                         <div>
                             <GoldBar  className='' src={"/assets/Cubes/GoldBar.png"} typeof='' alt='logo' />
-                            <CubeImg1 width={'100px'} left={'66vw'} top={'-8vh'} MLeft={'26vw'} MTop={'75vh'} className="Cube-1" src={"/assets/Cubes/GoldCube1.svg"} alt="cube1" />
-                            <CubeImg2 left={'59vw'} top={'14vh'} MLeft={'7vw'} MTop={'86vh'} className="Cube-2" src={"/assets/Cubes/GoldCube2.svg"} alt="cube2" />
-                            <CubeImg1 width={'118px'} left={'79vw'} top={'13vh'} MLeft={'60vw'} MTop={'84vh'} className="Cube-3" src={"/assets/Cubes/GoldCube3.svg"} alt="cube1" />
-                            <CubeImg1 width={'85px'} left={'76vw'} top={'39vh'} MLeft={'60vw'} MTop={'96vh'} className="Cube-4" src={"/assets/Cubes/GoldCube4.svg"} alt="cube1" />
-                            <CubeImg1 width={'86px'} left={'59vw'} top={'36vh'} MLeft={'5vw'} MTop={'93vh'} className="Cube-1" src={"/assets/Cubes/GoldCube5.svg"} alt="cube1" />
+                            <CubeImg1 width={'100px'} left={'66vw'} top={'9vh'} MLeft={'26vw'} MTop={'75vh'} className="Cube-1" src={"/assets/Cubes/GoldCube1.svg"} alt="cube1" />
+                            <CubeImg2 left={'59vw'} top={'31vh'} MLeft={'7vw'} MTop={'86vh'} className="Cube-2" src={"/assets/Cubes/GoldCube2.svg"} alt="cube2" />
+                            <CubeImg1 width={'118px'} left={'79vw'} top={'30vh'} MLeft={'60vw'} MTop={'84vh'} className="Cube-3" src={"/assets/Cubes/GoldCube3.svg"} alt="cube1" />
+                            <CubeImg1 width={'85px'} left={'76vw'} top={'52vh'} MLeft={'60vw'} MTop={'96vh'} className="Cube-4" src={"/assets/Cubes/GoldCube4.svg"} alt="cube1" />
+                            <CubeImg1 width={'86px'} left={'59vw'} top={'53vh'} MLeft={'5vw'} MTop={'93vh'} className="Cube-1" src={"/assets/Cubes/GoldCube5.svg"} alt="cube1" />
                         </div>
                     </Column2>
                 </AboutTable>
