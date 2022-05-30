@@ -4,6 +4,7 @@ pragma solidity ^0.8.4;
 import "./Ownable.sol";
 import "./Stakeable.sol";
 import "./IERC20.sol";
+import "./Freezeable.sol";
 
 /**
 * @notice consts are the constants used in the contract
@@ -18,7 +19,7 @@ contract consts {
 /**
 * @notice IllumiShareToken is token used for transfers in the Illumishare ecosystem 
 */
-contract IllumiShareToken is Ownable, Stakeable, consts{
+contract IllumiShareToken is Ownable, Stakeable, consts, Freezeable{
   uint private _totalSupply;
   uint8 private _decimals;
   string private _symbol;
@@ -86,12 +87,12 @@ contract IllumiShareToken is Ownable, Stakeable, consts{
 
     _totalSupply = _totalSupply + (amount);
     _balances[account] = _balances[account] + amount;
-    
-    emit Mint(account, amount);
   }
 
   function mint(address account, uint256 amount) public onlyOwner returns(bool){
     _mint(account, amount);
+
+    emit Mint(account, amount);
     return true;
   }
 
@@ -102,11 +103,13 @@ contract IllumiShareToken is Ownable, Stakeable, consts{
     _balances[account] = _balances[account] - amount;
     _totalSupply = _totalSupply - amount;
     
-    emit Burn(account, amount);
   }
 
   function burn(address account, uint256 amount) public onlyOwner returns(bool) {
     _burn(account, amount);
+
+    emit Burn(account, amount);
+
     return true;
   }
 
@@ -118,11 +121,13 @@ contract IllumiShareToken is Ownable, Stakeable, consts{
     _balances[sender] = _balances[sender] - amount;
     _balances[recipient] = _balances[recipient] + amount;
 
-    emit Transfer(sender, recipient, amount);
   }
 
   function transfer(address recipient, uint256 amount) external returns (bool) {
     _transfer(msg.sender, recipient, amount);
+
+    emit Transfer(msg.sender, recipient, amount);
+
     return true;
   }
 
@@ -132,11 +137,13 @@ contract IllumiShareToken is Ownable, Stakeable, consts{
     
     _allowances[owner][spender] = amount;
 
-    emit Approval(owner,spender,amount);
   }
 
   function approve(address spender, uint256 amount) external returns (bool) {
     _approve(msg.sender, spender, amount);
+
+    emit Approval(msg.sender, spender, amount);
+
     return true;
   }
 
@@ -159,6 +166,15 @@ contract IllumiShareToken is Ownable, Stakeable, consts{
     return true;
   }
 
+  function freezeTransfer(address recepient, address sender, uint256 amount, uint256 end_date) internal {
+    require(balanceOf(sender) >= amount, "illumiShare: Insufficent funds");
+    _freeze(recepient, amount, end_date);
+    _burn(sender, amount);
+  }
+
+  function withdrawFreeze(uint256 freeze_index) public {
+    _mint(msg.sender, _withdrawFreeze(freeze_index));
+  }
 
   /**
   * Add functionality like burn to the _stake afunction
@@ -176,8 +192,8 @@ contract IllumiShareToken is Ownable, Stakeable, consts{
   * @notice withdrawStake is used to withdraw stakes from the account holder
     */
   function withdrawStake(uint256 amount, uint256 stake_index)  public {
-    _burn(STAKE_WALLET, calculateStakeReward(stake_index));
     uint256 amount_to_mint = _withdrawStake(amount, stake_index);
+    _burn(STAKE_WALLET, calculateStakeReward(stake_index));
     // Return staked tokens to user
     _mint(msg.sender, amount_to_mint);
   }
