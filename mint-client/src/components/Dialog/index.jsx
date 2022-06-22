@@ -11,6 +11,12 @@ import { WalletButton } from "../../ButtonElements";
 import Web3 from "web3-eth";
 import abi from "./StakeToken.json";
 
+import WalletConnect from "@walletconnect/client";
+import QRCodeModal from "@walletconnect/qrcode-modal";
+
+// import { connector } from "./trustWallet"; 
+
+
 const MintDialog = (props) => {
   //   const [open, setOpen] = React.useState(props);
   const [open, setOpen] = React.useState(true);
@@ -43,17 +49,6 @@ const MintDialog = (props) => {
 
   const onAmountChange = (event) => {
     setBuyAmount(event.target.value);
-  };
-
-  const handleMaxWidthChange = (event) => {
-    setMaxWidth(
-      // @ts-expect-error autofill of arbitrary value is not handled.
-      event.target.value
-    );
-  };
-
-  const handleFullWidthChange = (event) => {
-    setFullWidth(event.target.checked);
   };
 
   const connectWalletHandler = () => {
@@ -120,6 +115,14 @@ const MintDialog = (props) => {
     setDefaultAccount(newAccount);
     getUserBalance(newAccount.toString());
   };
+
+
+
+
+  /////////////////////////////////Trust-Wallet//////////////////////////////////////
+    // Create a connector
+  
+  /////////////////////////////////Trust-Wallet//////////////////////////////////////
 
   const mint = () => {
     const price = buyAmount / TOKEN_PER_MATIC * (10 ** DECIMALS)

@@ -149,3 +149,61 @@
   margin: 0;
 }
 
+/* //////////////////////////////////// START - ICONS /////////////////////////// */
+.wrap-bottom {
+  /* position: absolute; */
+  display: flex;
+  /* top: 85vh; */
+  flex-direction: column;
+  margin-bottom: 4vh;
+}
+
+.under-line {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.wrap-icons-mobile {
+  display: none;
+}
+
+.icon, .last-icon {
+  padding-right: 1em;
+  font-size: 2em;
+}
+
+.icon, .more-icon, .last-icon {
+  color: white;
+}
+ 
+@media screen and (max-width: 425px) {
+  .icon {
+    font-size: 2em;
+    padding-right: 1.5em;
+  }
+  .last-icon {
+    font-size: 2em;
+    padding-right: 0;
+  }
+  .more-icon {
+    margin-bottom: 8vh;
+  }
+  .wrap-bottom {
+    place-items: center;
+    top: 70vh;
+  }
+  .wrap-icons-comp {
+    display: none;
+  }
+  .wrap-icons-mobile {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.icon:hover, .more-icon:hover {
+  color: gray;
+}
+
+/* //////////////////////////////////// FINISH - ICONS /////////////////////////// */
+

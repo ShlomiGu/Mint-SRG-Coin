@@ -89,10 +89,29 @@ const FAQ = () => {
         )})}
       </ContentContainer>
 
-      <RightsResevedSection>
-        <SeperationLine />
-        <RightsReservedText>{"© All Rights Reserved."}</RightsReservedText>
-      </RightsResevedSection>
+      <div className="wrap-bottom">
+                      <div className="wrap-icons-mobile">
+                        <div style={{marginBottom: "20px"}}>
+                          <a href="https://www.instagram.com/illumishare_srg/"><i className="fa fa-instagram icon" aria-hidden="true"></i></a>
+                          <a href="https://discord.com/invite/y44GfgfhHf"><i className="fa-brands fa-discord icon" aria-hidden="true" ></i></a>
+                          <a href="https://www.linkedin.com/company/illumishare-srg/"><i className="fa fa-linkedin icon" aria-hidden="true"></i></a>
+                          <a href="https://twitter.com/IllumishareSRG"><i class="fa fa-twitter last-icon" aria-hidden="true"></i></a>
+                        </div>
+                          <a href="https://linktr.ee/illumisharesrg" className="more-icon">More...</a>
+                      </div>
+                      
+                      <SeperationLine />
+                      <div className="under-line">
+                        <RightsReservedText>{"© All Rights Reserved."}</RightsReservedText>
+                        <div className="wrap-icons-comp">
+                          <a href="https://www.instagram.com/illumishare_srg/"><i class="fa fa-instagram fa-2x icon" aria-hidden="true"></i></a>
+                          <a href="https://discord.com/invite/y44GfgfhHf"><i class="fa-brands fa-discord icon" aria-hidden="true" /></a>
+                          <a href="https://www.linkedin.com/company/illumishare-srg/"><i class="fa fa-linkedin icon" aria-hidden="true"></i></a>
+                          <a href="https://twitter.com/IllumishareSRG"><i class="fa fa-twitter icon" aria-hidden="true"></i></a>
+                          <a href="https://linktr.ee/illumisharesrg" className="more-icon">More...</a>
+                        </div>
+                      </div>
+                    </div>
     </Screen>
   );
 };
