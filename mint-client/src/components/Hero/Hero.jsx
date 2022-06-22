@@ -8,10 +8,7 @@ import AnimatedNumber from "react-awesome-animated-number";
 import "react-awesome-animated-number/dist/index.css";
 import "./Counter.css"
 
-// import Number from "./Number";
-
 const HeroContainer = styled("div")({
-  width: "86vw",
   minHeight: "80vh",
   display: "flex",
   flexDirection: "column",
