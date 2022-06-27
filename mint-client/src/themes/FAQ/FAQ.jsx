@@ -52,7 +52,8 @@ const RightsReservedText = styled(Typography)({
   color: "#F1F1F1",
   alignSelf: 'center',
   justifySelf: 'center',
-  height: '--webkit-fill-available'
+  height: '--webkit-fill-available',
+  fontFamily: 'Poppins'
 });
 
 const SeperationLine = styled("div")({

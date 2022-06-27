@@ -8,8 +8,8 @@ export const Nav = styled.nav`
   height: 80px;
   margin-top: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   font-size: 1rem;
   position: sticky;
   top: 0;
@@ -26,14 +26,13 @@ export const Nav = styled.nav`
 
 export const NavbarContainer = styled.div`
   display: flex;
-  /* justify-content: space-around; */
   height: 80px;
   z-index: 1;
+  justify-content: space-between;
   width: 80%;
   margin: auto;
-  /* padding: 0 24px; */
+  
   @media screen and (max-width: 1440px) {
-    justify-content: space-between;
     width: 90%;
     margin: auto;
   }
